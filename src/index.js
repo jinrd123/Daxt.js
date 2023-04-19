@@ -1,7 +1,10 @@
 import express from "express";
+import React from "react"; // 提供jsx语法支持
+import { renderToString } from "react-dom/server";
 import Home from "./containers/Home";
 
 const app = express();
+const content = renderToString(<Home />);
 
 app.get("/", (req, res) => {
   res.send(
@@ -10,8 +13,7 @@ app.get("/", (req, res) => {
             <title>hello</title>
         </head>
         <body>
-            <h1>hello Daxt</h1>
-            <p>start at 2023.4.18</p>
+            ${content}
         </body>
     </html>`
   );
