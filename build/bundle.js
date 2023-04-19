@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/containers/Home/index.js":
+/*!**************************************!*\
+  !*** ./src/containers/Home/index.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home() {\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    \"home\"\n  );\n};\n\nexports[\"default\"] = Home;\n\n//# sourceURL=webpack://daxt/./src/containers/Home/index.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("\n\nvar express = __webpack_require__(/*! express */ \"express\");\nvar app = express();\n\napp.get(\"/\", function (req, res) {\n    res.send(\"<html>\\n        <head>\\n            <title>hello</title>\\n        </head>\\n        <body>\\n            <h1>hello Daxt</h1>\\n            <p>start at 2023.4.18</p>\\n        </body>\\n    </html>\");\n});\n\napp.listen(3000, function () {\n    console.log(\"server run successfully\");\n});\n\n//# sourceURL=webpack://daxt/./src/index.js?");
+eval("\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _Home = __webpack_require__(/*! ./containers/Home */ \"./src/containers/Home/index.js\");\n\nvar _Home2 = _interopRequireDefault(_Home);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)();\n\napp.get(\"/\", function (req, res) {\n    res.send(\"<html>\\n        <head>\\n            <title>hello</title>\\n        </head>\\n        <body>\\n            <h1>hello Daxt</h1>\\n            <p>start at 2023.4.18</p>\\n        </body>\\n    </html>\");\n});\n\napp.listen(3000, function () {\n    console.log(\"server run successfully\");\n});\n\n//# sourceURL=webpack://daxt/./src/index.js?");
 
 /***/ }),
 
@@ -27,6 +37,16 @@ eval("\n\nvar express = __webpack_require__(/*! express */ \"express\");\nvar ap
 /***/ ((module) => {
 
 module.exports = require("express");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/***/ ((module) => {
+
+module.exports = require("react");
 
 /***/ })
 

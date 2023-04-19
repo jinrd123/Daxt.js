@@ -1,4 +1,6 @@
-const express = require("express");
+import express from "express";
+import Home from "./containers/Home";
+
 const app = express();
 
 app.get("/", (req, res) => {
