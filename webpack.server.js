@@ -7,7 +7,7 @@ const serverConfig = {
   // target: "node", // 打包后输出再node环境下运行的代码
   externalsPresets: { node: true },
   mode: "development",
-  entry: "./src/index.js",
+  entry: "./src/server/index.js",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "build"),
