@@ -1,7 +1,7 @@
 import express from "express";
 import React from "react"; // 提供jsx语法支持
 import { renderToString } from "react-dom/server";
-import Home from "./containers/Home";
+import Home from "../src/containers/Home";
 
 const app = express();
 app.use(express.static("public"));
