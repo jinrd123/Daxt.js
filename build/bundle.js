@@ -46,7 +46,17 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _server = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\n\nvar _server2 = __webpack_require__(/*! react-router-dom/server */ \"react-router-dom/server\");\n\nvar _Routes = __webpack_require__(/*! ../Routes */ \"./src/Routes.js\");\n\nvar _Routes2 = _interopRequireDefault(_Routes);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)(); // 提供jsx语法支持\n\napp.use(_express2.default.static(\"public\"));\n\napp.get(\"*\", function (req, res) {\n  var content = (0, _server.renderToString)(_react2.default.createElement(\n    _server2.StaticRouter,\n    { location: req.path },\n    (0, _Routes2.default)()\n  ));\n  res.send(\"<html>\\n        <head>\\n            <title>hello</title>\\n        </head>\\n        <body>\\n            <div id=\\\"root\\\">\" + content + \"</div>\\n            <script src=\\\"./index.js\\\"></script>\\n        </body>\\n    </html>\");\n});\n\napp.listen(3000, function () {\n  console.log(\"server run successfully\");\n});\n\n//# sourceURL=webpack://daxt/./src/server/index.js?");
+eval("\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _utils = __webpack_require__(/*! ./utils */ \"./src/server/utils.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)();\napp.use(_express2.default.static(\"public\"));\n\napp.get(\"*\", function (req, res) {\n  res.send((0, _utils.render)(req));\n});\n\napp.listen(3000, function () {\n  console.log(\"server run successfully\");\n});\n\n//# sourceURL=webpack://daxt/./src/server/index.js?");
+
+/***/ }),
+
+/***/ "./src/server/utils.js":
+/*!*****************************!*\
+  !*** ./src/server/utils.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));\nexports.render = undefined;\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _server = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\n\nvar _server2 = __webpack_require__(/*! react-router-dom/server */ \"react-router-dom/server\");\n\nvar _Routes = __webpack_require__(/*! ../Routes */ \"./src/Routes.js\");\n\nvar _Routes2 = _interopRequireDefault(_Routes);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar render = exports.render = function render(req) {\n    var content = (0, _server.renderToString)(_react2.default.createElement(\n        _server2.StaticRouter,\n        { location: req.path },\n        (0, _Routes2.default)()\n    ));\n    return \"\\n        <html>\\n            <head>\\n                <title>hello</title>\\n            </head>\\n            <body>\\n                <div id=\\\"root\\\">\" + content + \"</div>\\n                <script src=\\\"./index.js\\\"></script>\\n            </body>\\n        </html>\\n    \";\n}; // 提供jsx语法支持\n\n//# sourceURL=webpack://daxt/./src/server/utils.js?");
 
 /***/ }),
 
