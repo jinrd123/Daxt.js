@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouterDom = __webpack_require__(/*! react-router-dom */ \"./node_modules/.pnpm/react-router-dom@6.10.0_biqbaboplfbrettd7655fr4n2y/node_modules/react-router-dom/dist/index.js\");\n\nvar _Home = __webpack_require__(/*! ./containers/Home */ \"./src/containers/Home/index.js\");\n\nvar _Home2 = _interopRequireDefault(_Home);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Routes = function Routes() {\n  return _react2.default.createElement(\n    _reactRouterDom.Routes,\n    null,\n    _react2.default.createElement(_reactRouterDom.Route, { path: \"/\", element: _react2.default.createElement(_Home2.default, null) })\n  );\n};\n\nexports[\"default\"] = Routes;\n\n//# sourceURL=webpack://daxt/./src/Routes.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouterDom = __webpack_require__(/*! react-router-dom */ \"./node_modules/.pnpm/react-router-dom@6.10.0_biqbaboplfbrettd7655fr4n2y/node_modules/react-router-dom/dist/index.js\");\n\nvar _Home = __webpack_require__(/*! ./containers/Home */ \"./src/containers/Home/index.js\");\n\nvar _Home2 = _interopRequireDefault(_Home);\n\nvar _About = __webpack_require__(/*! ./containers/About */ \"./src/containers/About/index.js\");\n\nvar _About2 = _interopRequireDefault(_About);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Routes = function Routes() {\n  return _react2.default.createElement(\n    _reactRouterDom.Routes,\n    null,\n    _react2.default.createElement(_reactRouterDom.Route, { path: \"/\", element: _react2.default.createElement(_Home2.default, null) }),\n    _react2.default.createElement(_reactRouterDom.Route, { path: \"/about\", element: _react2.default.createElement(_About2.default, null) })\n  );\n};\n\nexports[\"default\"] = Routes;\n\n//# sourceURL=webpack://daxt/./src/Routes.js?");
 
 /***/ }),
 
@@ -37,6 +37,16 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _client = __webpack_require__(/*! react-dom/client */ \"./node_modules/.pnpm/react-dom@18.2.0_react@18.2.0/node_modules/react-dom/client.js\");\n\nvar _reactRouterDom = __webpack_require__(/*! react-router-dom */ \"./node_modules/.pnpm/react-router-dom@6.10.0_biqbaboplfbrettd7655fr4n2y/node_modules/react-router-dom/dist/index.js\");\n\nvar _Routes = __webpack_require__(/*! ../Routes */ \"./src/Routes.js\");\n\nvar _Routes2 = _interopRequireDefault(_Routes);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar App = function App() {\n  return _react2.default.createElement(\n    _reactRouterDom.BrowserRouter,\n    null,\n    (0, _Routes2.default)()\n  );\n};\n\n(0, _client.hydrateRoot)(document.getElementById(\"root\"), _react2.default.createElement(App, null));\n\n//# sourceURL=webpack://daxt/./src/client/index.js?");
+
+/***/ }),
+
+/***/ "./src/containers/About/index.js":
+/*!***************************************!*\
+  !*** ./src/containers/About/index.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar About = function About() {\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    \"This is About page\"\n  );\n};\n\nexports[\"default\"] = About;\n\n//# sourceURL=webpack://daxt/./src/containers/About/index.js?");
 
 /***/ }),
 

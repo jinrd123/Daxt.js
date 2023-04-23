@@ -7,7 +7,7 @@ import Routes from "../Routes";
 const app = express();
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   const content = renderToString(
     <StaticRouter location={req.path}>{Routes()}</StaticRouter>
   );
