@@ -1,7 +1,7 @@
 import express from "express";
 import React from "react"; // 提供jsx语法支持
 import { renderToString } from "react-dom/server";
-import { StaticRouter } from "react-router-dom";
+import { StaticRouter } from "react-router-dom/server";
 import Routes from "../Routes";
 
 const app = express();
@@ -9,7 +9,7 @@ app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   const content = renderToString(
-    <StaticRouter location={req.path}>{Routes}</StaticRouter>
+    <StaticRouter location={req.path}>{Routes()}</StaticRouter>
   );
   res.send(
     `<html>

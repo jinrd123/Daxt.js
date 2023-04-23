@@ -1,9 +1,13 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Routes as RouterRoutes } from "react-router-dom";
 import Home from "./containers/Home";
 
-export default (
-  <div>
-    <Route path="/" exact component={Home}></Route>
-  </div>
-);
+const Routes = () => {
+  return (
+    <RouterRoutes>
+      <Route path="/" element={<Home />} />
+    </RouterRoutes>
+  );
+};
+
+export default Routes;
