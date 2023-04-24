@@ -2,10 +2,19 @@ import React from "react"; // 提供jsx语法支持
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import Routes from "../Routes";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
 
 export const render = (req) => {
+  const reducer = (state = { name: "daxt" }, action) => {
+    return state;
+  };
+  const store = createStore(reducer);
+
   const content = renderToString(
-    <StaticRouter location={req.path}>{Routes()}</StaticRouter>
+    <Provider store={store}>
+      <StaticRouter location={req.path}>{Routes()}</StaticRouter>
+    </Provider>
   );
   return `
         <html>
