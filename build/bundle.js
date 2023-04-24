@@ -36,7 +36,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
   \***************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Header = __webpack_require__(/*! ../../components/Header */ \"./src/components/Header.js\");\n\nvar _Header2 = _interopRequireDefault(_Header);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar About = function About() {\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    _react2.default.createElement(_Header2.default, null),\n    \"This is About page\"\n  );\n};\n\nexports[\"default\"] = About;\n\n//# sourceURL=webpack://daxt/./src/containers/About/index.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Header = __webpack_require__(/*! ../../components/Header */ \"./src/components/Header.js\");\n\nvar _Header2 = _interopRequireDefault(_Header);\n\nvar _actionCreator = __webpack_require__(/*! ../../store/actionCreator */ \"./src/store/actionCreator.js\");\n\nvar _reactRedux = __webpack_require__(/*! react-redux */ \"react-redux\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar About = function About(props) {\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    _react2.default.createElement(_Header2.default, null),\n    \"This is About page\",\n    _react2.default.createElement(\n      \"button\",\n      { onClick: props.changeName },\n      \"\\u6D3E\\u53D1action\\u4FEE\\u6539redux\\u4E2D\\u7684\\u6570\\u636E\"\n    ),\n    _react2.default.createElement(\"br\", null),\n    _react2.default.createElement(\n      \"button\",\n      { onClick: props.changeObj },\n      \"\\u6D3E\\u53D1action\\u4FEE\\u6539redux\\u4E2D\\u7684obj\\u6570\\u636E\"\n    )\n  );\n};\n\nvar mapDispatchToProps = function mapDispatchToProps(dispatch) {\n  return {\n    changeName: function changeName() {\n      dispatch((0, _actionCreator.changeNameAction)(\"Daxt.js\"));\n    },\n    changeObj: function changeObj() {\n      dispatch((0, _actionCreator.changeObjAction)({ info: \"test2\" }));\n    }\n  };\n};\n\nexports[\"default\"] = (0, _reactRedux.connect)(null, mapDispatchToProps)(About);\n// export default About;\n\n//# sourceURL=webpack://daxt/./src/containers/About/index.js?");
 
 /***/ }),
 
@@ -46,7 +46,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
   \**************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Header = __webpack_require__(/*! ../../components/Header */ \"./src/components/Header.js\");\n\nvar _Header2 = _interopRequireDefault(_Header);\n\nvar _reactRedux = __webpack_require__(/*! react-redux */ \"react-redux\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home(props) {\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    _react2.default.createElement(_Header2.default, null),\n    \"home: This is a data -- \\\"\",\n    props.name,\n    \"\\\" from redux\",\n    _react2.default.createElement(\n      \"button\",\n      { onClick: function onClick() {\n          return alert(\"click1\");\n        } },\n      \"click\"\n    )\n  );\n};\n\nvar mapStateToProps = function mapStateToProps(state) {\n  return {\n    name: state.name\n  };\n};\n\nexports[\"default\"] = (0, _reactRedux.connect)(mapStateToProps, null)(Home);\n\n//# sourceURL=webpack://daxt/./src/containers/Home/index.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Header = __webpack_require__(/*! ../../components/Header */ \"./src/components/Header.js\");\n\nvar _Header2 = _interopRequireDefault(_Header);\n\nvar _reactRedux = __webpack_require__(/*! react-redux */ \"react-redux\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home(props) {\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    _react2.default.createElement(_Header2.default, null),\n    \"home: This is a data -- \\\"\",\n    props.name,\n    \"\\\" from redux\",\n    _react2.default.createElement(\n      \"button\",\n      { onClick: function onClick() {\n          return alert(\"click1\");\n        } },\n      \"click\"\n    ),\n    _react2.default.createElement(\"br\", null),\n    \"This is a property of Object type in redux: \",\n    props.obj.info\n  );\n};\n\nvar mapStateToProps = function mapStateToProps(state) {\n  return {\n    name: state.name,\n    obj: state.obj\n  };\n};\n\nexports[\"default\"] = (0, _reactRedux.connect)(mapStateToProps, null)(Home);\n\n//# sourceURL=webpack://daxt/./src/containers/Home/index.js?");
 
 /***/ }),
 
@@ -56,7 +56,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _utils = __webpack_require__(/*! ./utils */ \"./src/server/utils.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)();\napp.use(_express2.default.static(\"public\"));\n\napp.get(\"*\", function (req, res) {\n  res.send((0, _utils.render)(req));\n});\n\napp.listen(3000, function () {\n  console.log(\"server run successfully\");\n});\n\n//# sourceURL=webpack://daxt/./src/server/index.js?");
+eval("\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _utils = __webpack_require__(/*! ./utils */ \"./src/server/utils.js\");\n\nvar _store = __webpack_require__(/*! ../store */ \"./src/store/index.js\");\n\nvar _store2 = _interopRequireDefault(_store);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)();\napp.use(_express2.default.static(\"public\"));\n\napp.get(\"*\", function (req, res) {\n  console.log(_store2.default.getState().name);\n  res.send((0, _utils.render)(req));\n});\n\napp.listen(3000, function () {\n  console.log(\"server run successfully\");\n});\n\n//# sourceURL=webpack://daxt/./src/server/index.js?");
 
 /***/ }),
 
@@ -70,13 +70,43 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n})
 
 /***/ }),
 
+/***/ "./src/store/actionCreator.js":
+/*!************************************!*\
+  !*** ./src/store/actionCreator.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports.changeObjAction = exports.changeNameAction = undefined;\n\nvar _constant = __webpack_require__(/*! ./constant */ \"./src/store/constant.js\");\n\nvar actionTypes = _interopRequireWildcard(_constant);\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\nvar changeNameAction = exports.changeNameAction = function changeNameAction(name) {\n  return {\n    type: actionTypes.CHANGE_NAME,\n    name: name\n  };\n};\n\nvar changeObjAction = exports.changeObjAction = function changeObjAction(obj) {\n  return {\n    type: actionTypes.CHANGE_OBJ,\n    obj: obj\n  };\n};\n\n//# sourceURL=webpack://daxt/./src/store/actionCreator.js?");
+
+/***/ }),
+
+/***/ "./src/store/constant.js":
+/*!*******************************!*\
+  !*** ./src/store/constant.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nvar CHANGE_NAME = exports.CHANGE_NAME = \"change_name\";\n\nvar CHANGE_OBJ = exports.CHANGE_OBJ = \"change_obj\";\n\n//# sourceURL=webpack://daxt/./src/store/constant.js?");
+
+/***/ }),
+
 /***/ "./src/store/index.js":
 /*!****************************!*\
   !*** ./src/store/index.js ***!
   \****************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _redux = __webpack_require__(/*! redux */ \"redux\");\n\nvar _reduxThunk = __webpack_require__(/*! redux-thunk */ \"redux-thunk\");\n\nvar _reduxThunk2 = _interopRequireDefault(_reduxThunk);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar reducer = function reducer() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { name: \"daxt\" };\n  var action = arguments[1];\n\n  return state;\n};\nvar store = (0, _redux.createStore)(reducer, (0, _redux.applyMiddleware)(_reduxThunk2.default));\n\nexports[\"default\"] = store;\n\n//# sourceURL=webpack://daxt/./src/store/index.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _redux = __webpack_require__(/*! redux */ \"redux\");\n\nvar _reduxThunk = __webpack_require__(/*! redux-thunk */ \"redux-thunk\");\n\nvar _reduxThunk2 = _interopRequireDefault(_reduxThunk);\n\nvar _reducer = __webpack_require__(/*! ./reducer */ \"./src/store/reducer.js\");\n\nvar _reducer2 = _interopRequireDefault(_reducer);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar store = (0, _redux.createStore)(_reducer2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default));\n\nexports[\"default\"] = store;\n\n//# sourceURL=webpack://daxt/./src/store/index.js?");
+
+/***/ }),
+
+/***/ "./src/store/reducer.js":
+/*!******************************!*\
+  !*** ./src/store/reducer.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _constant = __webpack_require__(/*! ./constant */ \"./src/store/constant.js\");\n\nvar actionTypes = _interopRequireWildcard(_constant);\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\n// 引入*的话就是一个对象，其下属性即为各导出变量\n\nvar initialState = {\n  name: \"Daxt\",\n  obj: {\n    info: \"test\"\n  }\n};\n\nfunction reducer() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;\n  var action = arguments[1];\n\n  switch (action.type) {\n    case actionTypes.CHANGE_NAME:\n      return _extends({}, state, { name: action.name });\n    case actionTypes.CHANGE_OBJ:\n      return _extends({}, state, { obj: action.obj });\n    default:\n      return state;\n  }\n}\n\nexports[\"default\"] = reducer;\n\n//# sourceURL=webpack://daxt/./src/store/reducer.js?");
 
 /***/ }),
 
