@@ -1,7 +1,6 @@
 import { CHANGE_HOME_LIST } from "./constants";
 
 const defaultState = {
-  name: "Daxt",
   data: "home data",
 };
 

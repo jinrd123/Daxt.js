@@ -12,16 +12,13 @@ const Home = (props) => {
   return (
     <div>
       <Header />
-      home: This is a data -- "{props.name}" from redux
       <br />
       {props.data}
-      <button onClick={() => alert("click1")}>click</button>
     </div>
   );
 };
 
 const mapStateToProps = (state) => ({
-  name: state.home.name,
   data: state.home.data,
 });
 
