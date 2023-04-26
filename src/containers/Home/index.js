@@ -1,18 +1,20 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import { connect } from "react-redux";
-import { getHomeList } from "./store/actions";
+import { getHomeData } from "./store/actions";
 
 const Home = (props) => {
   useEffect(() => {
-    const { getHomeList } = props;
-    getHomeList();
+    const { getHomeData } = props;
+    getHomeData();
   }, []);
 
   return (
     <div>
       <Header />
       home: This is a data -- "{props.name}" from redux
+      <br />
+      {props.data}
       <button onClick={() => alert("click1")}>click</button>
     </div>
   );
@@ -20,11 +22,12 @@ const Home = (props) => {
 
 const mapStateToProps = (state) => ({
   name: state.home.name,
+  data: state.home.data,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  getHomeList() {
-    dispatch(getHomeList());
+  getHomeData() {
+    dispatch(getHomeData());
   },
 });
 
