@@ -26,7 +26,6 @@ export const routesConfig = [
   },
 ];
 
-// TODO: 增加嵌套路由子<Route />的生成
 export const getRoutes = (routesConfig) => {
   const getRouteStructure = (routesConfig) => {
     const RouteStructure = routesConfig.map((route, index) => {
