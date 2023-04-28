@@ -2,22 +2,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js?$/,
-        loader: "babel-loader",
+        test: /\.js$/,
         exclude: /node_modules/,
-        options: {
-          presets: [
-            "react",
-            "stage-0",
-            [
-              "env",
-              {
-                targets: {
-                  browsers: ["last 2 versions"], // 处理后的代码兼容主流浏览器最新的两个版本
-                },
-              },
-            ],
-          ],
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
         },
       },
     ],

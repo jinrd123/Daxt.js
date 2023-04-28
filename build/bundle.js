@@ -14,9 +14,9 @@
 /*!***********************!*\
   !*** ./src/Routes.js ***!
   \***********************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports.matchRoutes = exports.fetchAsyncData = exports.getRoutes = exports.routesConfig = undefined;\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouterDom = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n\nvar _Home = __webpack_require__(/*! ./containers/Home */ \"./src/containers/Home/index.js\");\n\nvar _Home2 = _interopRequireDefault(_Home);\n\nvar _About = __webpack_require__(/*! ./containers/About */ \"./src/containers/About/index.js\");\n\nvar _About2 = _interopRequireDefault(_About);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar routesConfig = exports.routesConfig = [{\n  path: \"/\",\n  element: _react2.default.createElement(_Home2.default, null),\n  loadData: _Home2.default.loadData\n}, {\n  path: \"/about\",\n  element: _react2.default.createElement(_About2.default, null)\n}];\n\n// TODO: 增加嵌套路由子<Route />的生成\nvar getRoutes = exports.getRoutes = function getRoutes(routesConfig) {\n  return _react2.default.createElement(\n    _reactRouterDom.Routes,\n    null,\n    routesConfig.map(function (route, index) {\n      return _react2.default.createElement(_reactRouterDom.Route, _extends({}, route, { key: index }));\n    })\n  );\n};\n\n// TODO: 修改逻辑适配嵌套路由异步数据的获取，将下面的matchedRoute修改为mathedRoutes(当前只获取匹配到的一个顶层路由)\n// 获取路由组件所需的异步数据填充到store中\n// 这里要求组件挂载的loadData函数需要传入store实例\nvar fetchAsyncData = exports.fetchAsyncData = function fetchAsyncData(routesConfig, targetPath, store) {\n  var matchedRoute = matchRoutes(routesConfig, targetPath);\n  console.log(targetPath);\n  // console.log(\"@@@\", matchedRoute);\n  if (matchedRoute.loadData) {\n    matchedRoute.loadData(store);\n  }\n};\n\n// TODO: 增加嵌套路由的匹配支持 & 完善重定向处理...\n// 获取客户端请求路径对应的所有需要获取异步数据的路由配置项\nvar matchRoutes = exports.matchRoutes = function matchRoutes(routesConfig, targetPath) {\n  var ans = void 0;\n  routesConfig.map(function (route) {\n    // console.log(route);\n    if (route.path === targetPath) {\n      ans = route;\n    }\n  });\n  console.log(ans);\n  return ans;\n};\n\n//# sourceURL=webpack://daxt/./src/Routes.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"fetchAsyncData\": () => (/* binding */ fetchAsyncData),\n/* harmony export */   \"getRoutes\": () => (/* binding */ getRoutes),\n/* harmony export */   \"matchRoutes\": () => (/* binding */ matchRoutes),\n/* harmony export */   \"routesConfig\": () => (/* binding */ routesConfig)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _containers_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./containers/Home */ \"./src/containers/Home/index.js\");\n/* harmony import */ var _containers_About__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./containers/About */ \"./src/containers/About/index.js\");\nfunction _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\n\n\n\nvar routesConfig = [{\n  path: \"/\",\n  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_containers_Home__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null),\n  loadData: _containers_Home__WEBPACK_IMPORTED_MODULE_2__[\"default\"].loadData\n}, {\n  path: \"/about\",\n  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_containers_About__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)\n}];\n\n// TODO: 增加嵌套路由子<Route />的生成\nvar getRoutes = function getRoutes(routesConfig) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Routes, null, routesConfig.map(function (route, index) {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, _extends({}, route, {\n      key: index\n    }));\n  }));\n};\n\n// TODO: 修改逻辑适配嵌套路由异步数据的获取，将下面的matchedRoute修改为mathedRoutes(当前只获取匹配到的一个顶层路由)\n// 获取路由组件所需的异步数据填充到store中\n// 这里要求组件挂载的loadData函数需要传入store实例\nvar fetchAsyncData = function fetchAsyncData(routesConfig, targetPath, store) {\n  var matchedRoute = matchRoutes(routesConfig, targetPath);\n  if (matchedRoute.loadData) {\n    matchedRoute.loadData(store);\n  }\n};\n\n// TODO: 增加嵌套路由的匹配支持 & 完善重定向处理...\n// 获取客户端请求路径对应的所有需要获取异步数据的路由配置项\nvar matchRoutes = function matchRoutes(routesConfig, targetPath) {\n  var ans;\n  routesConfig.map(function (route) {\n    if (route.path === targetPath) {\n      ans = route;\n    }\n  });\n  return ans;\n};\n\n//# sourceURL=webpack://daxt/./src/Routes.js?");
 
 /***/ }),
 
@@ -24,9 +24,9 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 /*!**********************************!*\
   !*** ./src/components/Header.js ***!
   \**********************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouterDom = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Header = function Header() {\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    _react2.default.createElement(\n      _reactRouterDom.Link,\n      { to: \"/\" },\n      \"Home\"\n    ),\n    _react2.default.createElement(\"br\", null),\n    _react2.default.createElement(\n      _reactRouterDom.Link,\n      { to: \"/about\" },\n      \"About\"\n    )\n  );\n};\n\nexports[\"default\"] = Header;\n\n//# sourceURL=webpack://daxt/./src/components/Header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar Header = function Header() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {\n    to: \"/\"\n  }, \"Home\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"br\", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {\n    to: \"/about\"\n  }, \"About\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);\n\n//# sourceURL=webpack://daxt/./src/components/Header.js?");
 
 /***/ }),
 
@@ -34,9 +34,9 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 /*!***************************************!*\
   !*** ./src/containers/About/index.js ***!
   \***************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Header = __webpack_require__(/*! ../../components/Header */ \"./src/components/Header.js\");\n\nvar _Header2 = _interopRequireDefault(_Header);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar About = function About() {\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    _react2.default.createElement(_Header2.default, null),\n    \"This is About page\"\n  );\n};\n\nexports[\"default\"] = About;\n\n//# sourceURL=webpack://daxt/./src/containers/About/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Header */ \"./src/components/Header.js\");\n\n\nvar About = function About() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), \"This is About page\");\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);\n\n//# sourceURL=webpack://daxt/./src/containers/About/index.js?");
 
 /***/ }),
 
@@ -44,9 +44,9 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 /*!**************************************!*\
   !*** ./src/containers/Home/index.js ***!
   \**************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Header = __webpack_require__(/*! ../../components/Header */ \"./src/components/Header.js\");\n\nvar _Header2 = _interopRequireDefault(_Header);\n\nvar _reactRedux = __webpack_require__(/*! react-redux */ \"react-redux\");\n\nvar _actions = __webpack_require__(/*! ./store/actions */ \"./src/containers/Home/store/actions.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home(props) {\n  (0, _react.useEffect)(function () {\n    var getHomeData = props.getHomeData;\n\n    getHomeData();\n  }, []);\n\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    _react2.default.createElement(_Header2.default, null),\n    _react2.default.createElement(\"br\", null),\n    props.data\n  );\n};\n\nHome.loadData = function (store) {\n  console.log(\"store派发action来获取组件需要的异步数据\");\n};\n\nvar mapStateToProps = function mapStateToProps(state) {\n  return {\n    data: state.home.data\n  };\n};\n\nvar mapDispatchToProps = function mapDispatchToProps(dispatch) {\n  return {\n    getHomeData: function getHomeData() {\n      dispatch((0, _actions.getHomeData)());\n    }\n  };\n};\n\nexports[\"default\"] = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Home);\n\n//# sourceURL=webpack://daxt/./src/containers/Home/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Header */ \"./src/components/Header.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ \"react-redux\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/actions */ \"./src/containers/Home/store/actions.js\");\n\n\n\n\nvar Home = function Home(props) {\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {\n    var getHomeData = props.getHomeData;\n    getHomeData();\n  }, []);\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"br\", null), props.data);\n};\nHome.loadData = function (store) {\n  console.log(\"store派发action来获取组件需要的异步数据\");\n};\nvar mapStateToProps = function mapStateToProps(state) {\n  return {\n    data: state.home.data\n  };\n};\nvar mapDispatchToProps = function mapDispatchToProps(dispatch) {\n  return {\n    getHomeData: function getHomeData() {\n      dispatch((0,_store_actions__WEBPACK_IMPORTED_MODULE_3__.getHomeData)());\n    }\n  };\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_2__.connect)(mapStateToProps, mapDispatchToProps)(Home));\n\n//# sourceURL=webpack://daxt/./src/containers/Home/index.js?");
 
 /***/ }),
 
@@ -54,9 +54,9 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 /*!**********************************************!*\
   !*** ./src/containers/Home/store/actions.js ***!
   \**********************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports.getHomeData = exports.changeHomeData = undefined;\n\nvar _constants = __webpack_require__(/*! ./constants */ \"./src/containers/Home/store/constants.js\");\n\nvar _axios = __webpack_require__(/*! axios */ \"axios\");\n\nvar _axios2 = _interopRequireDefault(_axios);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar changeHomeData = exports.changeHomeData = function changeHomeData(data) {\n  return {\n    type: _constants.CHANGE_HOME_LIST,\n    data: data\n  };\n};\n\nvar getHomeData = exports.getHomeData = function getHomeData() {\n  return function (dispatch) {\n    _axios2.default.get(\"http://127.0.0.1:80\").then(function (res) {\n      var homeData = res.data;\n      dispatch(changeHomeData(homeData));\n    });\n  };\n};\n\n//# sourceURL=webpack://daxt/./src/containers/Home/store/actions.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"changeHomeData\": () => (/* binding */ changeHomeData),\n/* harmony export */   \"getHomeData\": () => (/* binding */ getHomeData)\n/* harmony export */ });\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ \"./src/containers/Home/store/constants.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ \"axios\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar changeHomeData = function changeHomeData(data) {\n  return {\n    type: _constants__WEBPACK_IMPORTED_MODULE_0__.CHANGE_HOME_LIST,\n    data: data\n  };\n};\nvar getHomeData = function getHomeData() {\n  return function (dispatch) {\n    axios__WEBPACK_IMPORTED_MODULE_1___default().get(\"http://127.0.0.1:80\").then(function (res) {\n      var homeData = res.data;\n      dispatch(changeHomeData(homeData));\n    });\n  };\n};\n\n//# sourceURL=webpack://daxt/./src/containers/Home/store/actions.js?");
 
 /***/ }),
 
@@ -64,9 +64,9 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 /*!************************************************!*\
   !*** ./src/containers/Home/store/constants.js ***!
   \************************************************/
-/***/ ((__unused_webpack_module, exports) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nvar CHANGE_HOME_LIST = exports.CHANGE_HOME_LIST = \"change_home_list\";\n\n//# sourceURL=webpack://daxt/./src/containers/Home/store/constants.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"CHANGE_HOME_LIST\": () => (/* binding */ CHANGE_HOME_LIST)\n/* harmony export */ });\nvar CHANGE_HOME_LIST = \"change_home_list\";\n\n//# sourceURL=webpack://daxt/./src/containers/Home/store/constants.js?");
 
 /***/ }),
 
@@ -74,9 +74,9 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 /*!********************************************!*\
   !*** ./src/containers/Home/store/index.js ***!
   \********************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports.reducer = undefined;\n\nvar _reducer = __webpack_require__(/*! ./reducer */ \"./src/containers/Home/store/reducer.js\");\n\nvar _reducer2 = _interopRequireDefault(_reducer);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.reducer = _reducer2.default;\n\n//# sourceURL=webpack://daxt/./src/containers/Home/store/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"reducer\": () => (/* reexport safe */ _reducer__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n/* harmony export */ });\n/* harmony import */ var _reducer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reducer */ \"./src/containers/Home/store/reducer.js\");\n\n\n\n//# sourceURL=webpack://daxt/./src/containers/Home/store/index.js?");
 
 /***/ }),
 
@@ -84,9 +84,9 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 /*!**********************************************!*\
   !*** ./src/containers/Home/store/reducer.js ***!
   \**********************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _constants = __webpack_require__(/*! ./constants */ \"./src/containers/Home/store/constants.js\");\n\nvar defaultState = {\n  data: \"home data\"\n};\n\nexports[\"default\"] = function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;\n  var action = arguments[1];\n\n  switch (action.type) {\n    case _constants.CHANGE_HOME_LIST:\n      return _extends({}, state, {\n        data: action.data\n      });\n    default:\n      return state;\n  }\n};\n\n//# sourceURL=webpack://daxt/./src/containers/Home/store/reducer.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ \"./src/containers/Home/store/constants.js\");\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && \"function\" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }, _typeof(obj); }\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }\nfunction _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\nfunction _toPropertyKey(arg) { var key = _toPrimitive(arg, \"string\"); return _typeof(key) === \"symbol\" ? key : String(key); }\nfunction _toPrimitive(input, hint) { if (_typeof(input) !== \"object\" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || \"default\"); if (_typeof(res) !== \"object\") return res; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (hint === \"string\" ? String : Number)(input); }\n\nvar defaultState = {\n  data: \"home data\"\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n  switch (action.type) {\n    case _constants__WEBPACK_IMPORTED_MODULE_0__.CHANGE_HOME_LIST:\n      return _objectSpread(_objectSpread({}, state), {}, {\n        data: action.data\n      });\n    default:\n      return state;\n  }\n});\n\n//# sourceURL=webpack://daxt/./src/containers/Home/store/reducer.js?");
 
 /***/ }),
 
@@ -94,9 +94,9 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 /*!*****************************!*\
   !*** ./src/server/index.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _utils = __webpack_require__(/*! ./utils */ \"./src/server/utils.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)();\napp.use(_express2.default.static(\"public\"));\n\napp.get(\"*\", function (req, res) {\n  res.send((0, _utils.render)(req));\n});\n\napp.listen(3000, function () {\n  console.log(\"server run successfully\");\n});\n\n//# sourceURL=webpack://daxt/./src/server/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ \"./src/server/utils.js\");\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\napp.use(express__WEBPACK_IMPORTED_MODULE_0___default()[\"static\"](\"public\"));\napp.get(\"*\", function (req, res) {\n  res.send((0,_utils__WEBPACK_IMPORTED_MODULE_1__.render)(req));\n});\napp.listen(3000, function () {\n  console.log(\"server run successfully\");\n});\n\n//# sourceURL=webpack://daxt/./src/server/index.js?");
 
 /***/ }),
 
@@ -104,9 +104,9 @@ eval("\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar
 /*!*****************************!*\
   !*** ./src/server/utils.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));\nexports.render = undefined;\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _server = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\n\nvar _server2 = __webpack_require__(/*! react-router-dom/server */ \"react-router-dom/server\");\n\nvar _Routes = __webpack_require__(/*! ../Routes */ \"./src/Routes.js\");\n\nvar _reactRedux = __webpack_require__(/*! react-redux */ \"react-redux\");\n\nvar _store = __webpack_require__(/*! ../store */ \"./src/store/index.js\");\n\nvar _store2 = _interopRequireDefault(_store);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar render = exports.render = function render(req) {\n    var store = (0, _store2.default)();\n    (0, _Routes.fetchAsyncData)(_Routes.routesConfig, req.path, store);\n    var content = (0, _server.renderToString)(_react2.default.createElement(\n        _reactRedux.Provider,\n        { store: store },\n        _react2.default.createElement(\n            _server2.StaticRouter,\n            { location: req.path },\n            (0, _Routes.getRoutes)(_Routes.routesConfig)\n        )\n    ));\n    return \"\\n        <html>\\n            <head>\\n                <title>hello</title>\\n            </head>\\n            <body>\\n                <div id=\\\"root\\\">\" + content + \"</div>\\n                <script src=\\\"./index.js\\\"></script>\\n            </body>\\n        </html>\\n    \";\n}; // 提供jsx语法支持\n\n//# sourceURL=webpack://daxt/./src/server/utils.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_router_dom_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom/server */ \"react-router-dom/server\");\n/* harmony import */ var react_router_dom_server__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_router_dom_server__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Routes */ \"./src/Routes.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ \"react-redux\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store */ \"./src/store/index.js\");\n // 提供jsx语法支持\n\n\n\n\n\nvar render = function render(req) {\n  var store = (0,_store__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n  (0,_Routes__WEBPACK_IMPORTED_MODULE_3__.fetchAsyncData)(_Routes__WEBPACK_IMPORTED_MODULE_3__.routesConfig, req.path, store);\n  var content = (0,react_dom_server__WEBPACK_IMPORTED_MODULE_1__.renderToString)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_4__.Provider, {\n    store: store\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom_server__WEBPACK_IMPORTED_MODULE_2__.StaticRouter, {\n    location: req.path\n  }, (0,_Routes__WEBPACK_IMPORTED_MODULE_3__.getRoutes)(_Routes__WEBPACK_IMPORTED_MODULE_3__.routesConfig))));\n  return \"\\n        <html>\\n            <head>\\n                <title>hello</title>\\n            </head>\\n            <body>\\n                <div id=\\\"root\\\">\".concat(content, \"</div>\\n                <script src=\\\"./index.js\\\"></script>\\n            </body>\\n        </html>\\n    \");\n};\n\n//# sourceURL=webpack://daxt/./src/server/utils.js?");
 
 /***/ }),
 
@@ -114,9 +114,9 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n})
 /*!****************************!*\
   !*** ./src/store/index.js ***!
   \****************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\n\nvar _redux = __webpack_require__(/*! redux */ \"redux\");\n\nvar _reduxThunk = __webpack_require__(/*! redux-thunk */ \"redux-thunk\");\n\nvar _reduxThunk2 = _interopRequireDefault(_reduxThunk);\n\nvar _store = __webpack_require__(/*! ../containers/Home/store */ \"./src/containers/Home/store/index.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar reducer = (0, _redux.combineReducers)({\n  home: _store.reducer\n});\n\nvar getStore = function getStore() {\n  return (0, _redux.createStore)(reducer, (0, _redux.applyMiddleware)(_reduxThunk2.default));\n};\n\nexports[\"default\"] = getStore;\n\n//# sourceURL=webpack://daxt/./src/store/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"redux\");\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ \"redux-thunk\");\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _containers_Home_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../containers/Home/store */ \"./src/containers/Home/store/index.js\");\n\n\n\nvar reducer = (0,redux__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({\n  home: _containers_Home_store__WEBPACK_IMPORTED_MODULE_2__.reducer\n});\nvar getStore = function getStore() {\n  return (0,redux__WEBPACK_IMPORTED_MODULE_0__.createStore)(reducer, (0,redux__WEBPACK_IMPORTED_MODULE_0__.applyMiddleware)((redux_thunk__WEBPACK_IMPORTED_MODULE_1___default())));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getStore);\n\n//# sourceURL=webpack://daxt/./src/store/index.js?");
 
 /***/ }),
 
@@ -235,6 +235,47 @@ module.exports = require("redux-thunk");
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	
