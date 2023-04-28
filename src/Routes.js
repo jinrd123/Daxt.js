@@ -1,7 +1,8 @@
 import React from "react";
-import { Route, Routes as RouterRoutes } from "react-router-dom";
+import { Navigate, Route, Routes as RouterRoutes } from "react-router-dom";
 import Home from "./containers/Home";
 import About from "./containers/About";
+import AboutChildren from "./containers/About/Children";
 
 export const routesConfig = [
   {
@@ -12,18 +13,37 @@ export const routesConfig = [
   {
     path: "/about",
     element: <About />,
+    children: [
+      {
+        path: "/about",
+        element: <Navigate to="/about/children" />,
+      },
+      {
+        path: "/about/children",
+        element: <AboutChildren />,
+      },
+    ],
   },
 ];
 
 // TODO: 增加嵌套路由子<Route />的生成
 export const getRoutes = (routesConfig) => {
-  return (
-    <RouterRoutes>
-      {routesConfig.map((route, index) => (
-        <Route {...route} key={index} />
-      ))}
-    </RouterRoutes>
-  );
+  const getRouteStructure = (routesConfig) => {
+    const RouteStructure = routesConfig.map((route, index) => {
+      if (route.children && route.children.length > 0) {
+        return (
+          <Route {...route} key={index}>
+            {getRouteStructure(route.children)}
+          </Route>
+        );
+      } else {
+        return <Route {...route} key={index} />;
+      }
+    });
+    return RouteStructure;
+  };
+
+  return <RouterRoutes>{getRouteStructure(routesConfig)}</RouterRoutes>;
 };
 
 // TODO: 修改逻辑适配嵌套路由异步数据的获取，将下面的matchedRoute修改为mathedRoutes(当前只获取匹配到的一个顶层路由)
@@ -31,7 +51,7 @@ export const getRoutes = (routesConfig) => {
 // 这里要求组件挂载的loadData函数需要传入store实例
 export const fetchAsyncData = (routesConfig, targetPath, store) => {
   const matchedRoute = matchRoutes(routesConfig, targetPath);
-  if (matchedRoute.loadData) {
+  if (matchedRoute && matchedRoute.loadData) {
     matchedRoute.loadData(store);
   }
 };
