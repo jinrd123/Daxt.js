@@ -19,7 +19,7 @@ const Home = (props) => {
 };
 
 Home.loadData = (store) => {
-  console.log("store派发action来获取组件需要的异步数据");
+  return store.dispatch(getHomeData());
 };
 
 const mapStateToProps = (state) => ({
