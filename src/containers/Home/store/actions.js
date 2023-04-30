@@ -1,14 +1,16 @@
 import { CHANGE_HOME_LIST } from "./constants";
-import axios from "axios";
+import clientAxios from "../../../client/request";
+import serverAxios from "../../../server/request";
 
 export const changeHomeData = (data) => ({
   type: CHANGE_HOME_LIST,
   data,
 });
 
-export const getHomeData = () => {
+export const getHomeData = (server) => {
+  const request = server ? serverAxios : clientAxios;
   return (dispatch) => {
-    return axios.get("/api").then((res) => {
+    return request.get("/").then((res) => {
       const homeData = res.data;
       dispatch(changeHomeData(homeData));
     });

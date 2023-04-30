@@ -19,16 +19,16 @@ app.use(
 
 app.get("*", (req, res) => {
   const store = getStore();
-  // const matchedRoutes = matchRoutes(routesConfig, req.path);
-  // const promises = [];
-  // matchedRoutes.forEach((item) => {
-  //   if (item.route.loadData) {
-  //     promises.push(item.route.loadData(store));
-  //   }
-  // });
-  // Promise.all(promises).then(() => {
-  res.send(render(req, store));
-  // });
+  const matchedRoutes = matchRoutes(routesConfig, req.path);
+  const promises = [];
+  matchedRoutes.forEach((item) => {
+    if (item.route.loadData) {
+      promises.push(item.route.loadData(store));
+    }
+  });
+  Promise.all(promises).then(() => {
+    res.send(render(req, store));
+  });
 });
 
 app.listen(3000, () => {
