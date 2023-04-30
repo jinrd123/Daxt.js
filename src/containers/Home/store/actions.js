@@ -8,7 +8,7 @@ export const changeHomeData = (data) => ({
 
 export const getHomeData = () => {
   return (dispatch) => {
-    return axios.get("http://127.0.0.1:80").then((res) => {
+    return axios.get("/api").then((res) => {
       const homeData = res.data;
       dispatch(changeHomeData(homeData));
     });
