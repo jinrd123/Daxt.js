@@ -19,7 +19,7 @@ const Home = (props) => {
 };
 
 Home.loadData = (store) => {
-  return store.dispatch(getHomeData(true));
+  return store.dispatch(getHomeData());
 };
 
 const mapStateToProps = (state) => ({
@@ -28,7 +28,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getHomeData() {
-    dispatch(getHomeData(false));
+    dispatch(getHomeData());
   },
 });
 
