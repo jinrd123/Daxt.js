@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import { connect } from "react-redux";
 import { getHomeData } from "./store/actions";
+import styles from "./style.css";
 
 const Home = (props) => {
   useEffect(() => {
@@ -10,7 +11,7 @@ const Home = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.test}>
       <Header />
       <br />
       {props.data}
