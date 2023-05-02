@@ -3,8 +3,10 @@ import Header from "../../components/Header";
 import { connect } from "react-redux";
 import { getHomeData } from "./store/actions";
 import styles from "./style.css";
+import useStyles from "isomorphic-style-loader/useStyles";
 
 const Home = (props) => {
+  useStyles(styles);
   useEffect(() => {
     const { getHomeData } = props;
     getHomeData();

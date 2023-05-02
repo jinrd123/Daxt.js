@@ -14,7 +14,7 @@ const clientConfig = {
       {
         test: /\.css$/i,
         use: [
-          "style-loader",
+          "isomorphic-style-loader",
           {
             loader: "css-loader",
             options: {
@@ -22,6 +22,7 @@ const clientConfig = {
               modules: {
                 localIdentName: "[name]_[local]_[hash:base64:5]",
               },
+              esModule: false,
               // localIdentName: "[name]_[local]_[hash:base64:5]",
             },
           },
