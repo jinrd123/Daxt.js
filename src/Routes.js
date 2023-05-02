@@ -1,8 +1,8 @@
 import React from "react";
 import { Navigate, Route, Routes as RouterRoutes } from "react-router-dom";
-import Home from "./containers/Home";
-import About from "./containers/About";
-import AboutChildren from "./containers/About/Children";
+import Home from "./views/Home";
+import About from "./views/About";
+import AboutChildren from "./views/About/Children";
 
 export const routesConfig = [
   {

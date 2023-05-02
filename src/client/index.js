@@ -9,6 +9,7 @@ import StyleContext from "isomorphic-style-loader/StyleContext";
 const App = () => {
   return (
     <Provider store={getClientStore()}>
+      <div>123</div>
       <BrowserRouter>{getRoutes(routesConfig)}</BrowserRouter>
     </Provider>
   );

@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
-import { reducer as homeReducer } from "../containers/Home/store";
+import { reducer as homeReducer } from "../views/Home/store";
 import clientAxios from "../client/request";
 import serverAxios from "../server/request";
 
