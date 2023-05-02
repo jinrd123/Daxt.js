@@ -12,7 +12,6 @@ export const render = (req, store) => {
   const content = renderToString(
     <StyleContext.Provider value={{ insertCss }}>
       <Provider store={store}>
-        <div>123</div>
         <StaticRouter location={req.path} context={{}}>
           {getRoutes(routesConfig)}
         </StaticRouter>
