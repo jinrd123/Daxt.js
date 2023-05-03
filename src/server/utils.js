@@ -4,6 +4,7 @@ import { StaticRouter } from "react-router-dom/server";
 import { routesConfig, getRoutes } from "../Routes";
 import { Provider } from "react-redux";
 import StyleContext from "isomorphic-style-loader/StyleContext";
+import { Helmet } from "react-helmet";
 
 export const render = (req, store) => {
   const css = new Set(); // CSS for all rendered React components
@@ -18,10 +19,13 @@ export const render = (req, store) => {
       </Provider>
     </StyleContext.Provider>
   );
+
+  const helmet = Helmet.renderStatic();
   return `
         <html>
             <head>
-                <title>hello</title>
+                ${helmet.title.toString()}
+                ${helmet.meta.toString()}
                 <style>${[...css].join("")}</style>
             </head>
             <body>
