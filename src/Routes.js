@@ -3,6 +3,7 @@ import { Navigate, Route, Routes as RouterRoutes } from "react-router-dom";
 import Home from "./views/Home";
 import About from "./views/About";
 import AboutChildren from "./views/About/Children";
+import NotFound from "./views/NotFound";
 
 export const routesConfig = [
   {
@@ -23,6 +24,11 @@ export const routesConfig = [
         element: <AboutChildren />,
       },
     ],
+  },
+  // 添加通配符路由，处理所有未匹配的路径
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ];
 

@@ -18,17 +18,35 @@ app.use(
 );
 
 app.get("*", (req, res) => {
-  const store = getStore();
-  const matchedRoutes = matchRoutes(routesConfig, req.path);
-  const promises = [];
-  matchedRoutes.forEach((item) => {
-    if (item.route.loadData) {
-      promises.push(item.route.loadData(store));
+  try {
+    const store = getStore();
+    const matchedRoutes = matchRoutes(routesConfig, req.path);
+    
+    // 检查是否匹配到路由
+    if (!matchedRoutes || matchedRoutes.length === 0) {
+      res.status(404).send(render(req, store));
+      return;
     }
-  });
-  Promise.all(promises).then(() => {
-    res.send(render(req, store));
-  });
+    
+    const promises = [];
+    matchedRoutes.forEach((item) => {
+      if (item.route.loadData) {
+        const promise = item.route.loadData(store).catch((error) => {
+          console.error(`Error loading data for route ${item.route.path}:`, error);
+          // 返回空数据，避免整个请求失败
+          return null;
+        });
+        promises.push(promise);
+      }
+    });
+    
+    Promise.all(promises).then(() => {
+      res.send(render(req, store));
+    })
+  } catch (error) {
+    console.error("Server error:", error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.listen(3000, () => {
