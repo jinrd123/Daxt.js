@@ -1,2 +1,552 @@
-/*! For license information please see bundle.js.LICENSE.txt */
-(()=>{var e={75:(e,t,n)=>{var r=n(556),o=n(645)(r);o.push([e.id,".style_test_ejhE3 {\n  background: skyblue;\n  color: brown;\n}\n",""]),o.locals={test:"style_test_ejhE3"},e.exports=o},123:(e,t,n)=>{var r=n(556),o=n(645)(r);o.push([e.id,".style_test_RDTp9 {\n  background: pink;\n  color: red;\n}\n",""]),o.locals={test:"style_test_RDTp9"},e.exports=o},138:(e,t,n)=>{var r=n(613),o=n(683),i="string"==typeof r?[[e.id,r,""]]:r;(t=e.exports=r.locals||{})._getContent=function(){return i},t._getCss=function(){return""+r},t._insertCss=function(e){return o(i,e)}},206:(e,t,n)=>{var r=n(123),o=n(683),i="string"==typeof r?[[e.id,r,""]]:r;(t=e.exports=r.locals||{})._getContent=function(){return i},t._getCss=function(){return""+r},t._insertCss=function(e){return o(i,e)}},299:(e,t,n)=>{var r=n(556),o=n(645)(r);o.push([e.id,".style_not-found_BREHz {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  background-color: #f5f5f5;\n}\n\n.style_not-found-content_pTtOS {\n  text-align: center;\n  padding: 2rem;\n  background: white;\n  border-radius: 8px;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);\n}\n\n.style_not-found_BREHz h1 {\n  font-size: 6rem;\n  color: #e74c3c;\n  margin: 0;\n  font-weight: bold;\n}\n\n.style_not-found_BREHz h2 {\n  font-size: 2rem;\n  color: #333;\n  margin: 1rem 0;\n}\n\n.style_not-found_BREHz p {\n  color: #666;\n  margin-bottom: 2rem;\n}\n\n.style_back-home_wNEaU {\n  display: inline-block;\n  padding: 12px 24px;\n  background-color: #3498db;\n  color: white;\n  text-decoration: none;\n  border-radius: 4px;\n  transition: background-color 0.3s;\n}\n\n.style_back-home_wNEaU:hover {\n  background-color: #2980b9;\n} ",""]),o.locals={"not-found":"style_not-found_BREHz","not-found-content":"style_not-found-content_pTtOS","back-home":"style_back-home_wNEaU"},e.exports=o},436:(e,t,n)=>{var r=n(75),o=n(683),i="string"==typeof r?[[e.id,r,""]]:r;(t=e.exports=r.locals||{})._getContent=function(){return i},t._getCss=function(){return""+r},t._insertCss=function(e){return o(i,e)}},556:e=>{"use strict";e.exports=function(e){return e[1]}},613:(e,t,n)=>{var r=n(556),o=n(645)(r);o.push([e.id,".style_test_UNFVm {\n  background: greenyellow;\n  color: red;\n}\n",""]),o.locals={test:"style_test_UNFVm"},e.exports=o},645:e=>{"use strict";e.exports=function(e){var t=[];return t.toString=function(){return this.map(function(t){var n="",r=void 0!==t[5];return t[4]&&(n+="@supports (".concat(t[4],") {")),t[2]&&(n+="@media ".concat(t[2]," {")),r&&(n+="@layer".concat(t[5].length>0?" ".concat(t[5]):""," {")),n+=e(t),r&&(n+="}"),t[2]&&(n+="}"),t[4]&&(n+="}"),n}).join("")},t.i=function(e,n,r,o,i){"string"==typeof e&&(e=[[null,e,void 0]]);var a={};if(r)for(var c=0;c<this.length;c++){var l=this[c][0];null!=l&&(a[l]=!0)}for(var u=0;u<e.length;u++){var s=[].concat(e[u]);r&&a[s[0]]||(void 0!==i&&(void 0===s[5]||(s[1]="@layer".concat(s[5].length>0?" ".concat(s[5]):""," {").concat(s[1],"}")),s[5]=i),n&&(s[2]?(s[1]="@media ".concat(s[2]," {").concat(s[1],"}"),s[2]=n):s[2]=n),o&&(s[4]?(s[1]="@supports (".concat(s[4],") {").concat(s[1],"}"),s[4]=o):s[4]="".concat(o)),t.push(s))}},t}},683:e=>{"use strict";var t={};function n(e){return btoa(encodeURIComponent(e).replace(/%([0-9A-F]{2})/g,function(e,t){return String.fromCharCode("0x"+t)}))}function r(e){e.forEach(function(e){if(--t[e]<=0){var n=document.getElementById(e);n&&n.parentNode.removeChild(n)}})}e.exports=function(e,o){for(var i=void 0===o?{}:o,a=i.replace,c=void 0!==a&&a,l=i.prepend,u=void 0!==l&&l,s=i.prefix,d=void 0===s?"s":s,f=[],m=0;m<e.length;m++){var p=e[m],h=p[0],v=p[1],y=p[2],b=p[3],g=""+d+h+"-"+m;if(f.push(g),!t[g]||c){t[g]=1;var E=document.getElementById(g),_=!1;E||(_=!0,(E=document.createElement("style")).setAttribute("type","text/css"),E.id=g,y&&E.setAttribute("media",y));var x=v;b&&"function"==typeof btoa&&(x+="\n/*# sourceMappingURL=data:application/json;base64,"+n(JSON.stringify(b))+"*/",x+="\n/*# sourceURL="+b.file+"?"+g+"*/"),"textContent"in E?E.textContent=x:E.styleSheet.cssText=x,_&&(u?document.head.insertBefore(E,document.head.childNodes[0]):document.head.appendChild(E))}else t[g]++}return r.bind(null,f)}},712:(e,t,n)=>{var r=n(299),o=n(683),i="string"==typeof r?[[e.id,r,""]]:r;(t=e.exports=r.locals||{})._getContent=function(){return i},t._getCss=function(){return""+r},t._insertCss=function(e){return o(i,e)}}},t={};function n(r){var o=t[r];if(void 0!==o)return o.exports;var i=t[r]={id:r,exports:{}};return e[r](i,i.exports,n),i.exports}n.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return n.d(t,{a:t}),t},n.d=(e,t)=>{for(var r in t)n.o(t,r)&&!n.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},n.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{"use strict";const e=require("express");var t=n.n(e);const r=require("react");var o=n.n(r);const i=require("react-dom/server"),a=require("react-router-dom/server"),c=require("react-router-dom"),l=function(){return o().createElement("div",null,o().createElement(c.Link,{to:"/"},"Home"),o().createElement("br",null),o().createElement(c.Link,{to:"/about"},"About"))},u=require("react-redux");var s="change_home_list",d=function(){return function(e,t,n){return n.get("/home").then(function(t){var n=t.data;e({type:s,data:n})})}},f=n(436),m=n.n(f);const p=require("isomorphic-style-loader/useStyles");var h=n.n(p);const v=require("react-helmet");var y=function(e){return h()(m()),(0,r.useEffect)(function(){(0,e.getHomeData)()},[]),o().createElement(r.Fragment,null,o().createElement(v.Helmet,null,o().createElement("title",null,"Welcom to my ssr site"),o().createElement("meta",{name:"description",content:"Daxt，麻雀虽小，五脏俱全"})),o().createElement("div",{className:m().test},o().createElement(l,null),"Hello， 我是靳荣达，这是我的一款基于react生态的服务端渲染框架，名为Daxt.js，有好运之意，同时致敬Next.js这款优秀的开源框架",o().createElement("div",null,"Daxt当前并不完善，但我认为也有如下的竞争力"),o().createElement("div",null,"不错的开发体验"),o().createElement("ul",null,o().createElement("li",null,"支持热更，借助nodemon、webpack watch以及npm-run-all等工具链的组合实现热更新"),o().createElement("li",null,"清晰的项目结构，components和views文件夹下，随心所欲的编写react代码，代码会自动被client以及server进行处理；Routes.js中使用配置对象的形式进行路由配置")),o().createElement("div",null,"路由支持："),o().createElement("ul",null,o().createElement("li",null,"集成了react-router-dom@6，支持react-router的最新特性"),o().createElement("li",null,"重写useRoutes方法(getRoutes)，支持嵌套路由"),o().createElement("li",null,"基于配置模式实现路由组件异步数据的ssr")),o().createElement("div",null,"基于redux的状态管理支持"),o().createElement("div",null,"对cssModule的样式服务端渲染支持"),o().createElement("div",null,"基于react-helmet进行更细节的seo优化"),o().createElement("div",null,e.data.title)))};y.loadData=function(e){return e.dispatch(d())};const b=(0,u.connect)(function(e){return{data:e.home.data}},function(e){return{getHomeData:function(){e(d())}}})(y);var g=n(206),E=n.n(g);const _=function(){return h()(E()),o().createElement("div",{className:E().test},o().createElement(l,null),"This is About page",o().createElement(c.Outlet,null))};var x=n(138),S=n.n(x);const w=function(){return h()(S()),o().createElement("div",{className:S().test},"This is AboutChildren")};n(712);const O=function(){return o().createElement("div",{className:"not-found"},o().createElement("div",{className:"not-found-content"},o().createElement("h1",null,"404"),o().createElement("h2",null,"页面未找到"),o().createElement("p",null,"抱歉，您访问的页面不存在。"),o().createElement("a",{href:"/",className:"back-home"},"返回首页")))};function j(){return j=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)({}).hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},j.apply(null,arguments)}var C=[{path:"/",element:o().createElement(b,null),loadData:b.loadData},{path:"/about",element:o().createElement(_,null),children:[{path:"/about",element:o().createElement(c.Navigate,{to:"/about/children"})},{path:"/about/children",element:o().createElement(w,null)}]},{path:"*",element:o().createElement(O,null)}];const D=require("isomorphic-style-loader/StyleContext");var R=n.n(D);function k(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=Array(t);n<t;n++)r[n]=e[n];return r}var P=function(e,t){var n,r=new Set,l=(0,i.renderToString)(o().createElement(R().Provider,{value:{insertCss:function(){for(var e=arguments.length,t=new Array(e),n=0;n<e;n++)t[n]=arguments[n];return t.forEach(function(e){return r.add(e._getCss())})}}},o().createElement(u.Provider,{store:t},o().createElement(a.StaticRouter,{location:e.path,context:{}},function(e){var t=function(e){return e.map(function(e,n){return e.children&&e.children.length>0?o().createElement(c.Route,j({},e,{key:n}),t(e.children)):o().createElement(c.Route,j({},e,{key:n}))})};return o().createElement(c.Routes,null,t(e))}(C))))),s=v.Helmet.renderStatic();return"\n        <html>\n            <head>\n                ".concat(s.title.toString(),"\n                ").concat(s.meta.toString(),"\n                <style>").concat((n=r,function(e){if(Array.isArray(e))return k(e)}(n)||function(e){if("undefined"!=typeof Symbol&&null!=e[Symbol.iterator]||null!=e["@@iterator"])return Array.from(e)}(n)||function(e,t){if(e){if("string"==typeof e)return k(e,t);var n={}.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?k(e,t):void 0}}(n)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()).join(""),'</style>\n            </head>\n            <body>\n                <div id="root">').concat(l,"</div>\n                <script>\n                  window.__CONTEXT__ = {\n                    initialState: ").concat(JSON.stringify(t.getState()),'\n                  }\n                <\/script>\n                <script src="./index.js"><\/script>\n            </body>\n        </html>\n    ')};const N=require("redux"),T=require("redux-thunk");var A=n.n(T);function L(e){return L="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},L(e)}function q(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function F(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{};t%2?q(Object(n),!0).forEach(function(t){H(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):q(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function H(e,t,n){return(t=function(e){var t=function(e){if("object"!=L(e)||!e)return e;var t=e[Symbol.toPrimitive];if(void 0!==t){var n=t.call(e,"string");if("object"!=L(n))return n;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(e)}(e);return"symbol"==L(t)?t:t+""}(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}var U={data:"home data"};const B=require("axios");var M=n.n(B);M().create({baseURL:"/api"});var z="http://127.0.0.1:".concat(3e3);const I=M().create({baseURL:z});var G=(0,N.combineReducers)({home:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:U,t=arguments.length>1?arguments[1]:void 0;return t.type===s?F(F({},e),{},{data:t.data}):e}});const J=require("express-http-proxy");var V=n.n(J);function W(e){return W="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},W(e)}function X(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,$(r.key),r)}}function $(e){var t=function(e){if("object"!=W(e)||!e)return e;var t=e[Symbol.toPrimitive];if(void 0!==t){var n=t.call(e,"string");if("object"!=W(n))return n;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(e)}(e);return"symbol"==W(t)?t:t+""}const K=function(){return e=function e(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.state="CLOSED",this.failureCount=0,this.failureThreshold=3,this.timeout=3e4,this.lastFailureTime=null},(t=[{key:"onSuccess",value:function(){this.failureCount=0,this.state="CLOSED"}},{key:"onFailure",value:function(){this.failureCount++,this.failureCount>=this.failureThreshold&&(this.state="OPEN",this.lastFailureTime=Date.now())}},{key:"shouldReset",value:function(){return"OPEN"===this.state&&Date.now()-this.lastFailureTime>this.timeout}},{key:"isOpen",value:function(){return this.shouldReset()&&(this.state="CLOSED",this.failureCount=0),"OPEN"===this.state}}])&&X(e.prototype,t),Object.defineProperty(e,"prototype",{writable:!1}),e;var e,t}();var Q=t()();Q.use(t().static("public"));var Y=new K;Q.get("/home",function(e,t){var n={title:"欢迎来到首页",description:"这是一个本地服务提供的首页数据",features:["服务端渲染 (SSR)","熔断器机制","代理转发","动态路由"],timestamp:(new Date).toISOString(),server:"本地服务"};t.json(n)}),Q.use("/api",V()(z,{proxyReqPathResolver:function(e){return e.url}})),Q.get("*",function(e,t){if(Y.isOpen())return console.log("熔断器开启，使用CSR降级渲染"),t.send('\n    <html>\n      <head>\n        <title>Loading...</title>\n        <meta charset="utf-8">\n      </head>\n      <body>\n        <div id="root">\n          <div style="text-align: center; padding: 50px;">\n            <h2>Loading...</h2>\n          </div>\n        </div>\n        \x3c!-- 降级模式标记 --\x3e\n        <script>\n          window.__DEGRADED_MODE__ = true;\n        <\/script>\n        <script src="./index.js"><\/script>\n      </body>\n    </html>\n  '),void console.log("@csrFallback render success");try{var n=(0,N.createStore)(G,(0,N.applyMiddleware)(A().withExtraArgument(I))),r=(0,c.matchRoutes)(C,e.path);if(!r||0===r.length)return void t.status(404).send(P(e,n));var o=[];r.forEach(function(e){if(e.route.loadData){var t=e.route.loadData(n).catch(function(t){return console.error("Error loading data for route ".concat(e.route.path,":"),t),null});o.push(t)}}),Promise.all(o).then(function(){Y.onSuccess(),t.send(P(e,n))}).catch(function(e){console.error("SSR rendering failed:",e),Y.onFailure(),t.send('\n    <html>\n      <head>\n        <title>Loading...</title>\n        <meta charset="utf-8">\n      </head>\n      <body>\n        <div id="root">\n          <div style="text-align: center; padding: 50px;">\n            <h2>Loading...</h2>\n          </div>\n        </div>\n        \x3c!-- 降级模式标记 --\x3e\n        <script>\n          window.__DEGRADED_MODE__ = true;\n        <\/script>\n        <script src="./index.js"><\/script>\n      </body>\n    </html>\n  ')})}catch(e){console.error("Server error:",e),Y.onFailure(),t.send('\n    <html>\n      <head>\n        <title>Loading...</title>\n        <meta charset="utf-8">\n      </head>\n      <body>\n        <div id="root">\n          <div style="text-align: center; padding: 50px;">\n            <h2>Loading...</h2>\n          </div>\n        </div>\n        \x3c!-- 降级模式标记 --\x3e\n        <script>\n          window.__DEGRADED_MODE__ = true;\n        <\/script>\n        <script src="./index.js"><\/script>\n      </body>\n    </html>\n  ')}}),Q.listen(3e3,function(){console.log("server run successfully")})})()})();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/views/About/Children/style.css":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/views/About/Children/style.css ***!
+  \*******************************************************************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{// Imports\nvar ___CSS_LOADER_API_NO_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/noSourceMaps.js\");\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_NO_SOURCEMAP_IMPORT___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `.style_test_UNFVm {\n  background: greenyellow;\n  color: red;\n}\n`, \"\"]);\n// Exports\n___CSS_LOADER_EXPORT___.locals = {\n\t\"test\": `style_test_UNFVm`\n};\nmodule.exports = ___CSS_LOADER_EXPORT___;\n\n\n//# sourceURL=webpack://daxt/./src/views/About/Children/style.css?./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet%5B1%5D.rules%5B1%5D.use%5B1%5D\n}");
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/views/About/style.css":
+/*!**********************************************************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/views/About/style.css ***!
+  \**********************************************************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{// Imports\nvar ___CSS_LOADER_API_NO_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/noSourceMaps.js\");\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_NO_SOURCEMAP_IMPORT___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `.style_test_RDTp9 {\n  background: pink;\n  color: red;\n}\n`, \"\"]);\n// Exports\n___CSS_LOADER_EXPORT___.locals = {\n\t\"test\": `style_test_RDTp9`\n};\nmodule.exports = ___CSS_LOADER_EXPORT___;\n\n\n//# sourceURL=webpack://daxt/./src/views/About/style.css?./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet%5B1%5D.rules%5B1%5D.use%5B1%5D\n}");
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/views/Home/style.css":
+/*!*********************************************************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/views/Home/style.css ***!
+  \*********************************************************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{// Imports\nvar ___CSS_LOADER_API_NO_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/noSourceMaps.js\");\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_NO_SOURCEMAP_IMPORT___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `.style_test_ejhE3 {\n  background: skyblue;\n  color: brown;\n}\n`, \"\"]);\n// Exports\n___CSS_LOADER_EXPORT___.locals = {\n\t\"test\": `style_test_ejhE3`\n};\nmodule.exports = ___CSS_LOADER_EXPORT___;\n\n\n//# sourceURL=webpack://daxt/./src/views/Home/style.css?./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet%5B1%5D.rules%5B1%5D.use%5B1%5D\n}");
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/views/NotFound/style.css":
+/*!*************************************************************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/views/NotFound/style.css ***!
+  \*************************************************************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{// Imports\nvar ___CSS_LOADER_API_NO_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/noSourceMaps.js\");\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_NO_SOURCEMAP_IMPORT___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `.style_not-found_BREHz {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  background-color: #f5f5f5;\n}\n\n.style_not-found-content_pTtOS {\n  text-align: center;\n  padding: 2rem;\n  background: white;\n  border-radius: 8px;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);\n}\n\n.style_not-found_BREHz h1 {\n  font-size: 6rem;\n  color: #e74c3c;\n  margin: 0;\n  font-weight: bold;\n}\n\n.style_not-found_BREHz h2 {\n  font-size: 2rem;\n  color: #333;\n  margin: 1rem 0;\n}\n\n.style_not-found_BREHz p {\n  color: #666;\n  margin-bottom: 2rem;\n}\n\n.style_back-home_wNEaU {\n  display: inline-block;\n  padding: 12px 24px;\n  background-color: #3498db;\n  color: white;\n  text-decoration: none;\n  border-radius: 4px;\n  transition: background-color 0.3s;\n}\n\n.style_back-home_wNEaU:hover {\n  background-color: #2980b9;\n} `, \"\"]);\n// Exports\n___CSS_LOADER_EXPORT___.locals = {\n\t\"not-found\": `style_not-found_BREHz`,\n\t\"not-found-content\": `style_not-found-content_pTtOS`,\n\t\"back-home\": `style_back-home_wNEaU`\n};\nmodule.exports = ___CSS_LOADER_EXPORT___;\n\n\n//# sourceURL=webpack://daxt/./src/views/NotFound/style.css?./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet%5B1%5D.rules%5B1%5D.use%5B1%5D\n}");
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/api.js":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/api.js ***!
+  \**********************************************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("{\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\nmodule.exports = function (cssWithMappingToString) {\n  var list = [];\n\n  // return the list of modules as css string\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = \"\";\n      var needLayer = typeof item[5] !== \"undefined\";\n      if (item[4]) {\n        content += \"@supports (\".concat(item[4], \") {\");\n      }\n      if (item[2]) {\n        content += \"@media \".concat(item[2], \" {\");\n      }\n      if (needLayer) {\n        content += \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\");\n      }\n      content += cssWithMappingToString(item);\n      if (needLayer) {\n        content += \"}\";\n      }\n      if (item[2]) {\n        content += \"}\";\n      }\n      if (item[4]) {\n        content += \"}\";\n      }\n      return content;\n    }).join(\"\");\n  };\n\n  // import a list of modules into the list\n  list.i = function i(modules, media, dedupe, supports, layer) {\n    if (typeof modules === \"string\") {\n      modules = [[null, modules, undefined]];\n    }\n    var alreadyImportedModules = {};\n    if (dedupe) {\n      for (var k = 0; k < this.length; k++) {\n        var id = this[k][0];\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n    for (var _k = 0; _k < modules.length; _k++) {\n      var item = [].concat(modules[_k]);\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        continue;\n      }\n      if (typeof layer !== \"undefined\") {\n        if (typeof item[5] === \"undefined\") {\n          item[5] = layer;\n        } else {\n          item[1] = \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\").concat(item[1], \"}\");\n          item[5] = layer;\n        }\n      }\n      if (media) {\n        if (!item[2]) {\n          item[2] = media;\n        } else {\n          item[1] = \"@media \".concat(item[2], \" {\").concat(item[1], \"}\");\n          item[2] = media;\n        }\n      }\n      if (supports) {\n        if (!item[4]) {\n          item[4] = \"\".concat(supports);\n        } else {\n          item[1] = \"@supports (\".concat(item[4], \") {\").concat(item[1], \"}\");\n          item[4] = supports;\n        }\n      }\n      list.push(item);\n    }\n  };\n  return list;\n};\n\n//# sourceURL=webpack://daxt/./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/api.js?\n}");
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/noSourceMaps.js":
+/*!*******************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/noSourceMaps.js ***!
+  \*******************************************************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("{\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=webpack://daxt/./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/runtime/noSourceMaps.js?\n}");
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/isomorphic-style-loader@5.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/isomorphic-style-loader/insertCss.js":
+/*!********************************************************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/isomorphic-style-loader@5.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/isomorphic-style-loader/insertCss.js ***!
+  \********************************************************************************************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("{/*! Isomorphic Style Loader | MIT License | https://github.com/kriasoft/isomorphic-style-loader */\n\n\n\nvar inserted = {};\nfunction b64EncodeUnicode(str) {\n  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function (match, p1) {\n    return String.fromCharCode(\"0x\" + p1);\n  }));\n}\nfunction removeCss(ids) {\n  ids.forEach(function (id) {\n    if (--inserted[id] <= 0) {\n      var elem = document.getElementById(id);\n      if (elem) {\n        elem.parentNode.removeChild(elem);\n      }\n    }\n  });\n}\nfunction insertCss(styles, _temp) {\n  var _ref = _temp === void 0 ? {} : _temp,\n    _ref$replace = _ref.replace,\n    replace = _ref$replace === void 0 ? false : _ref$replace,\n    _ref$prepend = _ref.prepend,\n    prepend = _ref$prepend === void 0 ? false : _ref$prepend,\n    _ref$prefix = _ref.prefix,\n    prefix = _ref$prefix === void 0 ? 's' : _ref$prefix;\n  var ids = [];\n  for (var i = 0; i < styles.length; i++) {\n    var _styles$i = styles[i],\n      moduleId = _styles$i[0],\n      css = _styles$i[1],\n      media = _styles$i[2],\n      sourceMap = _styles$i[3];\n    var id = \"\" + prefix + moduleId + \"-\" + i;\n    ids.push(id);\n    if (inserted[id]) {\n      if (!replace) {\n        inserted[id]++;\n        continue;\n      }\n    }\n    inserted[id] = 1;\n    var elem = document.getElementById(id);\n    var create = false;\n    if (!elem) {\n      create = true;\n      elem = document.createElement('style');\n      elem.setAttribute('type', 'text/css');\n      elem.id = id;\n      if (media) {\n        elem.setAttribute('media', media);\n      }\n    }\n    var cssText = css;\n    if (sourceMap && typeof btoa === 'function') {\n      cssText += \"\\n/*# sourceMappingURL=data:application/json;base64,\" + b64EncodeUnicode(JSON.stringify(sourceMap)) + \"*/\";\n      cssText += \"\\n/*# sourceURL=\" + sourceMap.file + \"?\" + id + \"*/\";\n    }\n    if ('textContent' in elem) {\n      elem.textContent = cssText;\n    } else {\n      elem.styleSheet.cssText = cssText;\n    }\n    if (create) {\n      if (prepend) {\n        document.head.insertBefore(elem, document.head.childNodes[0]);\n      } else {\n        document.head.appendChild(elem);\n      }\n    }\n  }\n  return removeCss.bind(null, ids);\n}\nmodule.exports = insertCss;\n//# sourceMappingURL=insertCss.js.map\n\n\n//# sourceURL=webpack://daxt/./node_modules/.pnpm/isomorphic-style-loader@5.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/isomorphic-style-loader/insertCss.js?\n}");
+
+/***/ }),
+
+/***/ "./src/Routes.js":
+/*!***********************!*\
+  !*** ./src/Routes.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getRoutes: () => (/* binding */ getRoutes),\n/* harmony export */   routesConfig: () => (/* binding */ routesConfig)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _views_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./views/Home */ \"./src/views/Home/index.js\");\n/* harmony import */ var _views_About__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/About */ \"./src/views/About/index.js\");\n/* harmony import */ var _views_About_Children__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/About/Children */ \"./src/views/About/Children/index.js\");\n/* harmony import */ var _views_NotFound__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/NotFound */ \"./src/views/NotFound/index.js\");\nfunction _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }\n\n\n\n\n\n\nvar routesConfig = [{\n  path: \"/\",\n  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_views_Home__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null),\n  loadData: _views_Home__WEBPACK_IMPORTED_MODULE_2__[\"default\"].loadData\n}, {\n  path: \"/about\",\n  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_views_About__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null),\n  children: [{\n    path: \"/about\",\n    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {\n      to: \"/about/children\"\n    })\n  }, {\n    path: \"/about/children\",\n    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_views_About_Children__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null)\n  }]\n},\n// 添加通配符路由，处理所有未匹配的路径\n{\n  path: \"*\",\n  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_views_NotFound__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null)\n}];\nvar getRoutes = function getRoutes(routesConfig) {\n  var _getRouteStructure = function getRouteStructure(routesConfig) {\n    var RouteStructure = routesConfig.map(function (route, index) {\n      if (route.children && route.children.length > 0) {\n        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, _extends({}, route, {\n          key: index\n        }), _getRouteStructure(route.children));\n      } else {\n        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, _extends({}, route, {\n          key: index\n        }));\n      }\n    });\n    return RouteStructure;\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Routes, null, _getRouteStructure(routesConfig));\n};\n\n//# sourceURL=webpack://daxt/./src/Routes.js?\n}");
+
+/***/ }),
+
+/***/ "./src/client/request.js":
+/*!*******************************!*\
+  !*** ./src/client/request.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"axios\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n\nvar instance = axios__WEBPACK_IMPORTED_MODULE_0___default().create({\n  baseURL: \"/api\" // api触发本node服务的代理转发\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (instance);\n\n//# sourceURL=webpack://daxt/./src/client/request.js?\n}");
+
+/***/ }),
+
+/***/ "./src/components/Header.js":
+/*!**********************************!*\
+  !*** ./src/components/Header.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar Header = function Header() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {\n    to: \"/\"\n  }, \"Home\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"br\", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {\n    to: \"/about\"\n  }, \"About\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);\n\n//# sourceURL=webpack://daxt/./src/components/Header.js?\n}");
+
+/***/ }),
+
+/***/ "./src/constants/proxyConfig.js":
+/*!**************************************!*\
+  !*** ./src/constants/proxyConfig.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   REMOTE_URL: () => (/* binding */ REMOTE_URL)\n/* harmony export */ });\n/* harmony import */ var _serverConfig__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./serverConfig */ \"./src/constants/serverConfig.js\");\n\nvar REMOTE_URL = \"http://127.0.0.1:\".concat(_serverConfig__WEBPACK_IMPORTED_MODULE_0__.SERVER_PORT);\n\n//# sourceURL=webpack://daxt/./src/constants/proxyConfig.js?\n}");
+
+/***/ }),
+
+/***/ "./src/constants/serverConfig.js":
+/*!***************************************!*\
+  !*** ./src/constants/serverConfig.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   SERVER_PORT: () => (/* binding */ SERVER_PORT)\n/* harmony export */ });\nvar SERVER_PORT = 3000;\n\n//# sourceURL=webpack://daxt/./src/constants/serverConfig.js?\n}");
+
+/***/ }),
+
+/***/ "./src/server/circuitBreaker.js":
+/*!**************************************!*\
+  !*** ./src/server/circuitBreaker.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError(\"Cannot call a class as a function\"); }\nfunction _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, \"value\" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }\nfunction _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, \"prototype\", { writable: !1 }), e; }\nfunction _toPropertyKey(t) { var i = _toPrimitive(t, \"string\"); return \"symbol\" == _typeof(i) ? i : i + \"\"; }\nfunction _toPrimitive(t, r) { if (\"object\" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || \"default\"); if (\"object\" != _typeof(i)) return i; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (\"string\" === r ? String : Number)(t); }\nvar CircuitBreaker = /*#__PURE__*/function () {\n  function CircuitBreaker() {\n    _classCallCheck(this, CircuitBreaker);\n    this.state = 'CLOSED'; // CLOSED, OPEN\n    this.failureCount = 0;\n    this.failureThreshold = 3; // 3次失败后熔断\n    this.timeout = 30000; // 30秒后尝试恢复\n    this.lastFailureTime = null;\n  }\n  return _createClass(CircuitBreaker, [{\n    key: \"onSuccess\",\n    value: function onSuccess() {\n      this.failureCount = 0;\n      this.state = 'CLOSED';\n    }\n  }, {\n    key: \"onFailure\",\n    value: function onFailure() {\n      this.failureCount++;\n      if (this.failureCount >= this.failureThreshold) {\n        this.state = 'OPEN';\n        this.lastFailureTime = Date.now();\n      }\n    }\n  }, {\n    key: \"shouldReset\",\n    value: function shouldReset() {\n      return this.state === 'OPEN' && Date.now() - this.lastFailureTime > this.timeout;\n    }\n  }, {\n    key: \"isOpen\",\n    value: function isOpen() {\n      // MOCK: 熔断器关闭\n      // return true;\n      if (this.shouldReset()) {\n        this.state = 'CLOSED';\n        this.failureCount = 0;\n      }\n      return this.state === 'OPEN';\n    }\n  }]);\n}();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CircuitBreaker);\n\n//# sourceURL=webpack://daxt/./src/server/circuitBreaker.js?\n}");
+
+/***/ }),
+
+/***/ "./src/server/degradation.js":
+/*!***********************************!*\
+  !*** ./src/server/degradation.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   renderDegraded: () => (/* binding */ renderDegraded)\n/* harmony export */ });\nvar renderDegraded = function renderDegraded() {\n  return \"\\n    <html>\\n      <head>\\n        <title>Loading...</title>\\n        <meta charset=\\\"utf-8\\\">\\n      </head>\\n      <body>\\n        <div id=\\\"root\\\">\\n          <div style=\\\"text-align: center; padding: 50px;\\\">\\n            <h2>Loading...</h2>\\n          </div>\\n        </div>\\n        <!-- \\u964D\\u7EA7\\u6A21\\u5F0F\\u6807\\u8BB0 -->\\n        <script>\\n          window.__DEGRADED_MODE__ = true;\\n        </script>\\n        <script src=\\\"./index.js\\\"></script>\\n      </body>\\n    </html>\\n  \";\n};\n\n//# sourceURL=webpack://daxt/./src/server/degradation.js?\n}");
+
+/***/ }),
+
+/***/ "./src/server/index.js":
+/*!*****************************!*\
+  !*** ./src/server/index.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ \"./src/server/utils.js\");\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store */ \"./src/store/index.js\");\n/* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Routes */ \"./src/Routes.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var express_http_proxy__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! express-http-proxy */ \"express-http-proxy\");\n/* harmony import */ var express_http_proxy__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(express_http_proxy__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _circuitBreaker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./circuitBreaker */ \"./src/server/circuitBreaker.js\");\n/* harmony import */ var _degradation__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./degradation */ \"./src/server/degradation.js\");\n/* harmony import */ var _constants_proxyConfig__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../constants/proxyConfig */ \"./src/constants/proxyConfig.js\");\n/* harmony import */ var _constants_serverConfig__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../constants/serverConfig */ \"./src/constants/serverConfig.js\");\n\n\n\n\n\n\n\n\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\napp.use(express__WEBPACK_IMPORTED_MODULE_0___default()[\"static\"](\"public\"));\n\n// 创建熔断器实例\nvar ssrBreaker = new _circuitBreaker__WEBPACK_IMPORTED_MODULE_6__[\"default\"]();\n\n// 添加本地API接口\napp.get(\"/home\", function (req, res) {\n  // 模拟从数据库或其他数据源获取数据\n  var homeData = {\n    title: \"欢迎来到首页\",\n    description: \"这是一个本地服务提供的首页数据\",\n    features: [\"服务端渲染 (SSR)\", \"熔断器机制\", \"代理转发\", \"动态路由\"],\n    timestamp: new Date().toISOString(),\n    server: \"本地服务\"\n  };\n  res.json(homeData);\n});\napp.use(\"/api\", express_http_proxy__WEBPACK_IMPORTED_MODULE_5___default()(_constants_proxyConfig__WEBPACK_IMPORTED_MODULE_8__.REMOTE_URL, {\n  proxyReqPathResolver: function proxyReqPathResolver(req) {\n    return req.url;\n  }\n}));\napp.get(\"*\", function (req, res) {\n  // 检查熔断器状态\n  if (ssrBreaker.isOpen()) {\n    console.log(\"熔断器开启，使用CSR降级渲染\");\n    res.send((0,_degradation__WEBPACK_IMPORTED_MODULE_7__.renderDegraded)());\n    console.log('@csrFallback render success');\n    return;\n  }\n  try {\n    var store = (0,_store__WEBPACK_IMPORTED_MODULE_2__.getStore)();\n    var matchedRoutes = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.matchRoutes)(_Routes__WEBPACK_IMPORTED_MODULE_3__.routesConfig, req.path);\n\n    // 检查是否匹配到路由\n    if (!matchedRoutes || matchedRoutes.length === 0) {\n      res.status(404).send((0,_utils__WEBPACK_IMPORTED_MODULE_1__.render)(req, store));\n      return;\n    }\n    var promises = [];\n    matchedRoutes.forEach(function (item) {\n      if (item.route.loadData) {\n        var promise = item.route.loadData(store)[\"catch\"](function (error) {\n          console.error(\"Error loading data for route \".concat(item.route.path, \":\"), error);\n          return null;\n        });\n        promises.push(promise);\n      }\n    });\n    Promise.all(promises).then(function () {\n      ssrBreaker.onSuccess(); // SSR成功\n      res.send((0,_utils__WEBPACK_IMPORTED_MODULE_1__.render)(req, store));\n    })[\"catch\"](function (error) {\n      console.error(\"SSR rendering failed:\", error);\n      ssrBreaker.onFailure(); // SSR失败，触发熔断\n      res.send((0,_degradation__WEBPACK_IMPORTED_MODULE_7__.renderDegraded)());\n    });\n  } catch (error) {\n    console.error(\"Server error:\", error);\n    ssrBreaker.onFailure(); // 服务器错误，触发熔断\n    res.send((0,_degradation__WEBPACK_IMPORTED_MODULE_7__.renderDegraded)());\n  }\n});\napp.listen(_constants_serverConfig__WEBPACK_IMPORTED_MODULE_9__.SERVER_PORT, function () {\n  console.log(\"server run successfully\");\n});\n\n//# sourceURL=webpack://daxt/./src/server/index.js?\n}");
+
+/***/ }),
+
+/***/ "./src/server/request.js":
+/*!*******************************!*\
+  !*** ./src/server/request.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"axios\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _constants_proxyConfig__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants/proxyConfig */ \"./src/constants/proxyConfig.js\");\n\n\nvar instance = axios__WEBPACK_IMPORTED_MODULE_0___default().create({\n  baseURL: _constants_proxyConfig__WEBPACK_IMPORTED_MODULE_1__.REMOTE_URL // 服务端请求baseURL设置为远程服务器即可\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (instance);\n\n//# sourceURL=webpack://daxt/./src/server/request.js?\n}");
+
+/***/ }),
+
+/***/ "./src/server/utils.js":
+/*!*****************************!*\
+  !*** ./src/server/utils.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   render: () => (/* binding */ render)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_router_dom_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom/server */ \"react-router-dom/server\");\n/* harmony import */ var react_router_dom_server__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_router_dom_server__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Routes */ \"./src/Routes.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ \"react-redux\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var isomorphic_style_loader_StyleContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! isomorphic-style-loader/StyleContext */ \"isomorphic-style-loader/StyleContext\");\n/* harmony import */ var isomorphic_style_loader_StyleContext__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(isomorphic_style_loader_StyleContext__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-helmet */ \"react-helmet\");\n/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_6__);\nfunction _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _unsupportedIterableToArray(r, a) { if (r) { if (\"string\" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return \"Object\" === t && r.constructor && (t = r.constructor.name), \"Map\" === t || \"Set\" === t ? Array.from(r) : \"Arguments\" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }\nfunction _iterableToArray(r) { if (\"undefined\" != typeof Symbol && null != r[Symbol.iterator] || null != r[\"@@iterator\"]) return Array.from(r); }\nfunction _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }\nfunction _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }\n // 提供jsx语法支持\n\n\n\n\n\n\nvar render = function render(req, store) {\n  var css = new Set(); // CSS for all rendered React components\n  var insertCss = function insertCss() {\n    for (var _len = arguments.length, styles = new Array(_len), _key = 0; _key < _len; _key++) {\n      styles[_key] = arguments[_key];\n    }\n    return styles.forEach(function (style) {\n      return css.add(style._getCss());\n    });\n  };\n  var content = (0,react_dom_server__WEBPACK_IMPORTED_MODULE_1__.renderToString)(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((isomorphic_style_loader_StyleContext__WEBPACK_IMPORTED_MODULE_5___default().Provider), {\n    value: {\n      insertCss: insertCss\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_4__.Provider, {\n    store: store\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom_server__WEBPACK_IMPORTED_MODULE_2__.StaticRouter, {\n    location: req.path,\n    context: {}\n  }, (0,_Routes__WEBPACK_IMPORTED_MODULE_3__.getRoutes)(_Routes__WEBPACK_IMPORTED_MODULE_3__.routesConfig)))));\n  var helmet = react_helmet__WEBPACK_IMPORTED_MODULE_6__.Helmet.renderStatic();\n  return \"\\n        <html>\\n            <head>\\n                \".concat(helmet.title.toString(), \"\\n                \").concat(helmet.meta.toString(), \"\\n                <style>\").concat(_toConsumableArray(css).join(\"\"), \"</style>\\n            </head>\\n            <body>\\n                <div id=\\\"root\\\">\").concat(content, \"</div>\\n                <script>\\n                  window.__CONTEXT__ = {\\n                    initialState: \").concat(JSON.stringify(store.getState()), \"\\n                  }\\n                </script>\\n                <script src=\\\"./index.js\\\"></script>\\n            </body>\\n        </html>\\n    \");\n};\n\n//# sourceURL=webpack://daxt/./src/server/utils.js?\n}");
+
+/***/ }),
+
+/***/ "./src/store/index.js":
+/*!****************************!*\
+  !*** ./src/store/index.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getClientStore: () => (/* binding */ getClientStore),\n/* harmony export */   getStore: () => (/* binding */ getStore)\n/* harmony export */ });\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"redux\");\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ \"redux-thunk\");\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _views_Home_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../views/Home/store */ \"./src/views/Home/store/index.js\");\n/* harmony import */ var _client_request__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../client/request */ \"./src/client/request.js\");\n/* harmony import */ var _server_request__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../server/request */ \"./src/server/request.js\");\n\n\n\n\n\nvar reducer = (0,redux__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({\n  home: _views_Home_store__WEBPACK_IMPORTED_MODULE_2__.reducer\n});\nvar getStore = function getStore() {\n  return (0,redux__WEBPACK_IMPORTED_MODULE_0__.createStore)(reducer, (0,redux__WEBPACK_IMPORTED_MODULE_0__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_1___default().withExtraArgument(_server_request__WEBPACK_IMPORTED_MODULE_4__[\"default\"])));\n};\nvar getClientStore = function getClientStore() {\n  var _window$__CONTEXT__;\n  var defaultState = ((_window$__CONTEXT__ = window.__CONTEXT__) === null || _window$__CONTEXT__ === void 0 ? void 0 : _window$__CONTEXT__.initialState) || {};\n  return (0,redux__WEBPACK_IMPORTED_MODULE_0__.createStore)(reducer, defaultState, (0,redux__WEBPACK_IMPORTED_MODULE_0__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_1___default().withExtraArgument(_client_request__WEBPACK_IMPORTED_MODULE_3__[\"default\"])));\n};\n\n//# sourceURL=webpack://daxt/./src/store/index.js?\n}");
+
+/***/ }),
+
+/***/ "./src/views/About/Children/index.js":
+/*!*******************************************!*\
+  !*** ./src/views/About/Children/index.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/views/About/Children/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var isomorphic_style_loader_useStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! isomorphic-style-loader/useStyles */ \"isomorphic-style-loader/useStyles\");\n/* harmony import */ var isomorphic_style_loader_useStyles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(isomorphic_style_loader_useStyles__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nvar AboutChildren = function AboutChildren() {\n  isomorphic_style_loader_useStyles__WEBPACK_IMPORTED_MODULE_2___default()((_style_css__WEBPACK_IMPORTED_MODULE_1___default()));\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: (_style_css__WEBPACK_IMPORTED_MODULE_1___default().test)\n  }, \"This is AboutChildren\");\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AboutChildren);\n\n//# sourceURL=webpack://daxt/./src/views/About/Children/index.js?\n}");
+
+/***/ }),
+
+/***/ "./src/views/About/Children/style.css":
+/*!********************************************!*\
+  !*** ./src/views/About/Children/style.css ***!
+  \********************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+eval("{\n    var css = __webpack_require__(/*! !!../../../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./style.css */ \"./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/views/About/Children/style.css\");\n    var insertCss = __webpack_require__(/*! !../../../../node_modules/.pnpm/isomorphic-style-loader@5.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/isomorphic-style-loader/insertCss.js */ \"./node_modules/.pnpm/isomorphic-style-loader@5.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/isomorphic-style-loader/insertCss.js\");\n    var content = typeof css === 'string' ? [[module.id, css, '']] : css;\n\n    exports = module.exports = css.locals || {};\n    exports._getContent = function() { return content; };\n    exports._getCss = function() { return '' + css; };\n    exports._insertCss = function(options) { return insertCss(content, options) };\n\n    \n  \n\n//# sourceURL=webpack://daxt/./src/views/About/Children/style.css?\n}");
+
+/***/ }),
+
+/***/ "./src/views/About/index.js":
+/*!**********************************!*\
+  !*** ./src/views/About/index.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Header */ \"./src/components/Header.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ \"./src/views/About/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var isomorphic_style_loader_useStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! isomorphic-style-loader/useStyles */ \"isomorphic-style-loader/useStyles\");\n/* harmony import */ var isomorphic_style_loader_useStyles__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(isomorphic_style_loader_useStyles__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\nvar About = function About() {\n  isomorphic_style_loader_useStyles__WEBPACK_IMPORTED_MODULE_4___default()((_style_css__WEBPACK_IMPORTED_MODULE_3___default()));\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: (_style_css__WEBPACK_IMPORTED_MODULE_3___default().test)\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), \"This is About page\", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Outlet, null));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);\n\n//# sourceURL=webpack://daxt/./src/views/About/index.js?\n}");
+
+/***/ }),
+
+/***/ "./src/views/About/style.css":
+/*!***********************************!*\
+  !*** ./src/views/About/style.css ***!
+  \***********************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+eval("{\n    var css = __webpack_require__(/*! !!../../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./style.css */ \"./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/views/About/style.css\");\n    var insertCss = __webpack_require__(/*! !../../../node_modules/.pnpm/isomorphic-style-loader@5.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/isomorphic-style-loader/insertCss.js */ \"./node_modules/.pnpm/isomorphic-style-loader@5.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/isomorphic-style-loader/insertCss.js\");\n    var content = typeof css === 'string' ? [[module.id, css, '']] : css;\n\n    exports = module.exports = css.locals || {};\n    exports._getContent = function() { return content; };\n    exports._getCss = function() { return '' + css; };\n    exports._insertCss = function(options) { return insertCss(content, options) };\n\n    \n  \n\n//# sourceURL=webpack://daxt/./src/views/About/style.css?\n}");
+
+/***/ }),
+
+/***/ "./src/views/Home/index.js":
+/*!*********************************!*\
+  !*** ./src/views/Home/index.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Header */ \"./src/components/Header.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ \"react-redux\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/actions */ \"./src/views/Home/store/actions.js\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.css */ \"./src/views/Home/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var isomorphic_style_loader_useStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! isomorphic-style-loader/useStyles */ \"isomorphic-style-loader/useStyles\");\n/* harmony import */ var isomorphic_style_loader_useStyles__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(isomorphic_style_loader_useStyles__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-helmet */ \"react-helmet\");\n/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_6__);\n\n\n\n\n\n\n\nvar Home = function Home(props) {\n  isomorphic_style_loader_useStyles__WEBPACK_IMPORTED_MODULE_5___default()((_style_css__WEBPACK_IMPORTED_MODULE_4___default()));\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {\n    var getHomeData = props.getHomeData;\n    getHomeData();\n  }, []);\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_6__.Helmet, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"title\", null, \"Welcom to my ssr site\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"meta\", {\n    name: \"description\",\n    content: \"Daxt\\uFF0C\\u9EBB\\u96C0\\u867D\\u5C0F\\uFF0C\\u4E94\\u810F\\u4FF1\\u5168\"\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: (_style_css__WEBPACK_IMPORTED_MODULE_4___default().test)\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), \"Hello\\uFF0C \\u6211\\u662F\\u9773\\u8363\\u8FBE\\uFF0C\\u8FD9\\u662F\\u6211\\u7684\\u4E00\\u6B3E\\u57FA\\u4E8Ereact\\u751F\\u6001\\u7684\\u670D\\u52A1\\u7AEF\\u6E32\\u67D3\\u6846\\u67B6\\uFF0C\\u540D\\u4E3ADaxt.js\\uFF0C\\u6709\\u597D\\u8FD0\\u4E4B\\u610F\\uFF0C\\u540C\\u65F6\\u81F4\\u656CNext.js\\u8FD9\\u6B3E\\u4F18\\u79C0\\u7684\\u5F00\\u6E90\\u6846\\u67B6\", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"Daxt\\u5F53\\u524D\\u5E76\\u4E0D\\u5B8C\\u5584\\uFF0C\\u4F46\\u6211\\u8BA4\\u4E3A\\u4E5F\\u6709\\u5982\\u4E0B\\u7684\\u7ADE\\u4E89\\u529B\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"\\u4E0D\\u9519\\u7684\\u5F00\\u53D1\\u4F53\\u9A8C\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"ul\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"li\", null, \"\\u652F\\u6301\\u70ED\\u66F4\\uFF0C\\u501F\\u52A9nodemon\\u3001webpack watch\\u4EE5\\u53CAnpm-run-all\\u7B49\\u5DE5\\u5177\\u94FE\\u7684\\u7EC4\\u5408\\u5B9E\\u73B0\\u70ED\\u66F4\\u65B0\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"li\", null, \"\\u6E05\\u6670\\u7684\\u9879\\u76EE\\u7ED3\\u6784\\uFF0Ccomponents\\u548Cviews\\u6587\\u4EF6\\u5939\\u4E0B\\uFF0C\\u968F\\u5FC3\\u6240\\u6B32\\u7684\\u7F16\\u5199react\\u4EE3\\u7801\\uFF0C\\u4EE3\\u7801\\u4F1A\\u81EA\\u52A8\\u88ABclient\\u4EE5\\u53CAserver\\u8FDB\\u884C\\u5904\\u7406\\uFF1BRoutes.js\\u4E2D\\u4F7F\\u7528\\u914D\\u7F6E\\u5BF9\\u8C61\\u7684\\u5F62\\u5F0F\\u8FDB\\u884C\\u8DEF\\u7531\\u914D\\u7F6E\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"\\u8DEF\\u7531\\u652F\\u6301\\uFF1A\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"ul\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"li\", null, \"\\u96C6\\u6210\\u4E86react-router-dom@6\\uFF0C\\u652F\\u6301react-router\\u7684\\u6700\\u65B0\\u7279\\u6027\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"li\", null, \"\\u91CD\\u5199useRoutes\\u65B9\\u6CD5(getRoutes)\\uFF0C\\u652F\\u6301\\u5D4C\\u5957\\u8DEF\\u7531\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"li\", null, \"\\u57FA\\u4E8E\\u914D\\u7F6E\\u6A21\\u5F0F\\u5B9E\\u73B0\\u8DEF\\u7531\\u7EC4\\u4EF6\\u5F02\\u6B65\\u6570\\u636E\\u7684ssr\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"\\u57FA\\u4E8Eredux\\u7684\\u72B6\\u6001\\u7BA1\\u7406\\u652F\\u6301\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"\\u5BF9cssModule\\u7684\\u6837\\u5F0F\\u670D\\u52A1\\u7AEF\\u6E32\\u67D3\\u652F\\u6301\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"\\u57FA\\u4E8Ereact-helmet\\u8FDB\\u884C\\u66F4\\u7EC6\\u8282\\u7684seo\\u4F18\\u5316\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, props.data.title)));\n};\nHome.loadData = function (store) {\n  return store.dispatch((0,_store_actions__WEBPACK_IMPORTED_MODULE_3__.getHomeData)());\n};\nvar mapStateToProps = function mapStateToProps(state) {\n  return {\n    data: state.home.data\n  };\n};\nvar mapDispatchToProps = function mapDispatchToProps(dispatch) {\n  return {\n    getHomeData: function getHomeData() {\n      dispatch((0,_store_actions__WEBPACK_IMPORTED_MODULE_3__.getHomeData)());\n    }\n  };\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_2__.connect)(mapStateToProps, mapDispatchToProps)(Home));\n\n//# sourceURL=webpack://daxt/./src/views/Home/index.js?\n}");
+
+/***/ }),
+
+/***/ "./src/views/Home/store/actions.js":
+/*!*****************************************!*\
+  !*** ./src/views/Home/store/actions.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   changeHomeData: () => (/* binding */ changeHomeData),\n/* harmony export */   getHomeData: () => (/* binding */ getHomeData)\n/* harmony export */ });\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ \"./src/views/Home/store/constants.js\");\n\nvar changeHomeData = function changeHomeData(data) {\n  return {\n    type: _constants__WEBPACK_IMPORTED_MODULE_0__.CHANGE_HOME_LIST,\n    data: data\n  };\n};\nvar getHomeData = function getHomeData() {\n  return function (dispatch, getState, axiosInstance) {\n    return axiosInstance.get(\"/home\").then(function (res) {\n      var homeData = res.data;\n      dispatch(changeHomeData(homeData));\n    });\n  };\n};\n\n//# sourceURL=webpack://daxt/./src/views/Home/store/actions.js?\n}");
+
+/***/ }),
+
+/***/ "./src/views/Home/store/constants.js":
+/*!*******************************************!*\
+  !*** ./src/views/Home/store/constants.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   CHANGE_HOME_LIST: () => (/* binding */ CHANGE_HOME_LIST)\n/* harmony export */ });\nvar CHANGE_HOME_LIST = \"change_home_list\";\n\n//# sourceURL=webpack://daxt/./src/views/Home/store/constants.js?\n}");
+
+/***/ }),
+
+/***/ "./src/views/Home/store/index.js":
+/*!***************************************!*\
+  !*** ./src/views/Home/store/index.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   reducer: () => (/* reexport safe */ _reducer__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n/* harmony export */ });\n/* harmony import */ var _reducer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reducer */ \"./src/views/Home/store/reducer.js\");\n\n\n\n//# sourceURL=webpack://daxt/./src/views/Home/store/index.js?\n}");
+
+/***/ }),
+
+/***/ "./src/views/Home/store/reducer.js":
+/*!*****************************************!*\
+  !*** ./src/views/Home/store/reducer.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ \"./src/views/Home/store/constants.js\");\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }\nfunction _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }\nfunction _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }\nfunction _toPropertyKey(t) { var i = _toPrimitive(t, \"string\"); return \"symbol\" == _typeof(i) ? i : i + \"\"; }\nfunction _toPrimitive(t, r) { if (\"object\" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || \"default\"); if (\"object\" != _typeof(i)) return i; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (\"string\" === r ? String : Number)(t); }\n\nvar defaultState = {\n  data: \"home data\"\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n  switch (action.type) {\n    case _constants__WEBPACK_IMPORTED_MODULE_0__.CHANGE_HOME_LIST:\n      return _objectSpread(_objectSpread({}, state), {}, {\n        data: action.data\n      });\n    default:\n      return state;\n  }\n});\n\n//# sourceURL=webpack://daxt/./src/views/Home/store/reducer.js?\n}");
+
+/***/ }),
+
+/***/ "./src/views/Home/style.css":
+/*!**********************************!*\
+  !*** ./src/views/Home/style.css ***!
+  \**********************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+eval("{\n    var css = __webpack_require__(/*! !!../../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./style.css */ \"./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/views/Home/style.css\");\n    var insertCss = __webpack_require__(/*! !../../../node_modules/.pnpm/isomorphic-style-loader@5.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/isomorphic-style-loader/insertCss.js */ \"./node_modules/.pnpm/isomorphic-style-loader@5.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/isomorphic-style-loader/insertCss.js\");\n    var content = typeof css === 'string' ? [[module.id, css, '']] : css;\n\n    exports = module.exports = css.locals || {};\n    exports._getContent = function() { return content; };\n    exports._getCss = function() { return '' + css; };\n    exports._insertCss = function(options) { return insertCss(content, options) };\n\n    \n  \n\n//# sourceURL=webpack://daxt/./src/views/Home/style.css?\n}");
+
+/***/ }),
+
+/***/ "./src/views/NotFound/index.js":
+/*!*************************************!*\
+  !*** ./src/views/NotFound/index.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/views/NotFound/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar NotFound = function NotFound() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"not-found\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"not-found-content\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", null, \"404\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", null, \"\\u9875\\u9762\\u672A\\u627E\\u5230\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", null, \"\\u62B1\\u6B49\\uFF0C\\u60A8\\u8BBF\\u95EE\\u7684\\u9875\\u9762\\u4E0D\\u5B58\\u5728\\u3002\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", {\n    href: \"/\",\n    className: \"back-home\"\n  }, \"\\u8FD4\\u56DE\\u9996\\u9875\")));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NotFound);\n\n//# sourceURL=webpack://daxt/./src/views/NotFound/index.js?\n}");
+
+/***/ }),
+
+/***/ "./src/views/NotFound/style.css":
+/*!**************************************!*\
+  !*** ./src/views/NotFound/style.css ***!
+  \**************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+eval("{\n    var css = __webpack_require__(/*! !!../../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./style.css */ \"./node_modules/.pnpm/css-loader@6.11.0_webpack@5.100.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/views/NotFound/style.css\");\n    var insertCss = __webpack_require__(/*! !../../../node_modules/.pnpm/isomorphic-style-loader@5.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/isomorphic-style-loader/insertCss.js */ \"./node_modules/.pnpm/isomorphic-style-loader@5.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/isomorphic-style-loader/insertCss.js\");\n    var content = typeof css === 'string' ? [[module.id, css, '']] : css;\n\n    exports = module.exports = css.locals || {};\n    exports._getContent = function() { return content; };\n    exports._getCss = function() { return '' + css; };\n    exports._insertCss = function(options) { return insertCss(content, options) };\n\n    \n  \n\n//# sourceURL=webpack://daxt/./src/views/NotFound/style.css?\n}");
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("axios");
+
+/***/ }),
+
+/***/ "express":
+/*!**************************!*\
+  !*** external "express" ***!
+  \**************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("express");
+
+/***/ }),
+
+/***/ "express-http-proxy":
+/*!*************************************!*\
+  !*** external "express-http-proxy" ***!
+  \*************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("express-http-proxy");
+
+/***/ }),
+
+/***/ "isomorphic-style-loader/StyleContext":
+/*!*******************************************************!*\
+  !*** external "isomorphic-style-loader/StyleContext" ***!
+  \*******************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("isomorphic-style-loader/StyleContext");
+
+/***/ }),
+
+/***/ "isomorphic-style-loader/useStyles":
+/*!****************************************************!*\
+  !*** external "isomorphic-style-loader/useStyles" ***!
+  \****************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("isomorphic-style-loader/useStyles");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-dom/server":
+/*!***********************************!*\
+  !*** external "react-dom/server" ***!
+  \***********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-dom/server");
+
+/***/ }),
+
+/***/ "react-helmet":
+/*!*******************************!*\
+  !*** external "react-helmet" ***!
+  \*******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-helmet");
+
+/***/ }),
+
+/***/ "react-redux":
+/*!******************************!*\
+  !*** external "react-redux" ***!
+  \******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-redux");
+
+/***/ }),
+
+/***/ "react-router-dom":
+/*!***********************************!*\
+  !*** external "react-router-dom" ***!
+  \***********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-router-dom");
+
+/***/ }),
+
+/***/ "react-router-dom/server":
+/*!******************************************!*\
+  !*** external "react-router-dom/server" ***!
+  \******************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-router-dom/server");
+
+/***/ }),
+
+/***/ "redux":
+/*!************************!*\
+  !*** external "redux" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("redux");
+
+/***/ }),
+
+/***/ "redux-thunk":
+/*!******************************!*\
+  !*** external "redux-thunk" ***!
+  \******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("redux-thunk");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/server/index.js");
+/******/ 	
+/******/ })()
+;
