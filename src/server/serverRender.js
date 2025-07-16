@@ -27,6 +27,21 @@ export const render = (req, store) => {
                 ${helmet.title.toString()}
                 ${helmet.meta.toString()}
                 <style>${[...css].join("")}</style>
+                <style>
+                  * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                  }
+
+                  html, body {
+                    height: 100%;
+                  }
+
+                  #root {
+                    min-height: 100vh;
+                  }
+                </style>
             </head>
             <body>
                 <div id="root">${content}</div>
