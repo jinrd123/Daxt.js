@@ -4,9 +4,14 @@ import { getStore } from "../store";
 import { routesConfig } from "../Routes";
 import { matchRoutes } from "react-router-dom";
 import proxy from "express-http-proxy";
+import CircuitBreaker from "./circuitBreaker";
+import { renderDegraded } from "./degradation";
 
 const app = express();
 app.use(express.static("public"));
+
+// 创建熔断器实例
+const ssrBreaker = new CircuitBreaker();
 
 app.use(
   "/api",
@@ -18,6 +23,14 @@ app.use(
 );
 
 app.get("*", (req, res) => {
+  // 检查熔断器状态
+  if (ssrBreaker.isOpen()) {
+    console.log("熔断器开启，使用CSR降级渲染");
+    res.send(renderDegraded());
+    console.log('@csrFallback render success');
+    return;
+  }
+
   try {
     const store = getStore();
     const matchedRoutes = matchRoutes(routesConfig, req.path);
@@ -33,7 +46,6 @@ app.get("*", (req, res) => {
       if (item.route.loadData) {
         const promise = item.route.loadData(store).catch((error) => {
           console.error(`Error loading data for route ${item.route.path}:`, error);
-          // 返回空数据，避免整个请求失败
           return null;
         });
         promises.push(promise);
@@ -41,11 +53,17 @@ app.get("*", (req, res) => {
     });
     
     Promise.all(promises).then(() => {
+      ssrBreaker.onSuccess(); // SSR成功
       res.send(render(req, store));
-    })
+    }).catch((error) => {
+      console.error("SSR rendering failed:", error);
+      ssrBreaker.onFailure(); // SSR失败，触发熔断
+      res.send(renderDegraded());
+    });
   } catch (error) {
     console.error("Server error:", error);
-    res.status(500).send("Internal Server Error");
+    ssrBreaker.onFailure(); // 服务器错误，触发熔断
+    res.send(renderDegraded());
   }
 });
 

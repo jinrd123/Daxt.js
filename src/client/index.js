@@ -1,5 +1,5 @@
 import React from "react";
-import { hydrateRoot } from "react-dom/client";
+import { hydrateRoot, createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { routesConfig, getRoutes } from "../Routes";
 import { Provider } from "react-redux";
@@ -13,14 +13,51 @@ const App = () => {
     </Provider>
   );
 };
+
 const insertCss = (...styles) => {
   const removeCss = styles.map((style) => style._insertCss());
   return () => removeCss.forEach((dispose) => dispose());
 };
 
-hydrateRoot(
-  document.getElementById("root"),
-  <StyleContext.Provider value={{ insertCss }}>
-    <App />
-  </StyleContext.Provider>
-);
+// 检测是否为降级模式
+const isDegradedMode = () => {
+  // 优先检查服务端标记
+  if (window.__DEGRADED_MODE__) {
+    return true;
+  }
+  
+  const rootElement = document.getElementById("root");
+  // 检查是否有服务端渲染的React内容
+  const hasServerContent = rootElement.children.length > 0;
+  const hasComplexContent = rootElement.innerHTML.includes('class=') || 
+                           rootElement.innerHTML.includes('data-react');
+  
+  // 检查是否有服务端状态
+  const hasServerState = window.context && window.context.state;
+  
+  // 如果只有简单的loading内容且没有服务端状态，则为降级模式
+  return hasServerContent && !hasComplexContent && !hasServerState;
+};
+
+const rootElement = document.getElementById("root");
+
+if (isDegradedMode()) {
+  // 降级模式：清空root元素，使用createRoot进行完整渲染
+  console.log("检测到降级模式，使用CSR渲染");
+  rootElement.innerHTML = '';
+  const root = createRoot(rootElement);
+  root.render(
+    <StyleContext.Provider value={{ insertCss }}>
+      <App />
+    </StyleContext.Provider>
+  );
+} else {
+  // 正常模式：使用hydrateRoot进行水合
+  console.log("正常模式，使用SSR水合");
+  hydrateRoot(
+    rootElement,
+    <StyleContext.Provider value={{ insertCss }}>
+      <App />
+    </StyleContext.Provider>
+  );
+}
