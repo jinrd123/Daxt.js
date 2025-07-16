@@ -44,6 +44,7 @@ const rootElement = document.getElementById("root");
 if (isDegradedMode()) {
   // 降级模式：清空root元素，使用createRoot进行完整渲染
   console.log("检测到降级模式，使用CSR渲染");
+  // 清空ssr渲染的熔断相关tip/loading元素，同时清空root元素的内部dom以适配createRoot的入参要求
   rootElement.innerHTML = '';
   const root = createRoot(rootElement);
   root.render(

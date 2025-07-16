@@ -7,7 +7,7 @@ export const changeHomeData = (data) => ({
 
 export const getHomeData = () => {
   return (dispatch, getState, axiosInstance) => {
-    return axiosInstance.get("/home").then((res) => {
+    return axiosInstance.get("/features").then((res) => {
       const homeData = res.data;
       dispatch(changeHomeData(homeData));
     });

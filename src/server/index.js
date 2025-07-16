@@ -1,5 +1,5 @@
 import express from "express";
-import { render } from "./utils";
+import { render } from "./serverRender";
 import { getStore } from "../store";
 import { routesConfig } from "../Routes";
 import { matchRoutes } from "react-router-dom";
@@ -17,22 +17,32 @@ const ssrBreaker = new CircuitBreaker();
 
 
 // 添加本地API接口
-app.get("/home", (req, res) => {
+app.get("/features", (req, res) => {
   // 模拟从数据库或其他数据源获取数据
-  const homeData = {
-    title: "欢迎来到首页",
-    description: "这是一个本地服务提供的首页数据",
+  const featuresData = {
+    code: 200,
+    message: "success",
     features: [
-      "服务端渲染 (SSR)",
-      "熔断器机制",
-      "代理转发",
-      "动态路由"
-    ],
-    timestamp: new Date().toISOString(),
-    server: "本地服务"
+      {
+        title: "样式直出",
+        desc: "支持CSS的SSR，解决样式闪动问题"
+      },
+      {
+        title: "异步数据SSR",
+        desc: "可控的异步数据渲染，极致的首屏性能与SEO支持"
+      },
+      {
+        title: "CSR熔断降级",
+        desc: "支持自动/手动CSR渲染降级，避免服务端性能瓶颈"
+      },
+      {
+        title: "开发体验与生态集成",
+        desc: "热更新、反向代理、配置化路由、状态管理..."
+      },
+    ]
   };
   
-  res.json(homeData);
+  res.json(featuresData);
 });
 
 app.use(
