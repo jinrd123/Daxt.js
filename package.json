@@ -3,11 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "npm-run-all --parallel dev:**",
     "dev:build:server": "webpack --config webpack.server.js --watch",
     "dev:build:client": "webpack --config webpack.client.js --watch",
-    "dev:start": "nodemon --watch build --exec node ./build/bundle.js"
+    "dev:start": "nodemon --watch build --exec node ./build/bundle.js",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "webpack --config webpack.client.js --mode production",
+    "build:server": "webpack --config webpack.server.js --mode production",
+    "start": "node ./build/bundle.js",
+    "build:vercel": "npm run build && vercel --prod"
   },
   "keywords": [],
   "author": "",

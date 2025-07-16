@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "functions": {
+    "build/bundle.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "builds": [
+    {
+      "src": "build/bundle.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/build/bundle.js"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/public/favicon.ico"
+    },
+    {
+      "src": "/index.js",
+      "dest": "/public/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/build/bundle.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+} 
