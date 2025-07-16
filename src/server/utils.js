@@ -31,8 +31,8 @@ export const render = (req, store) => {
             <body>
                 <div id="root">${content}</div>
                 <script>
-                  window.context = {
-                    state: ${JSON.stringify(store.getState())}
+                  window.__CONTEXT__ = {
+                    initialState: ${JSON.stringify(store.getState())}
                   }
                 </script>
                 <script src="./index.js"></script>
