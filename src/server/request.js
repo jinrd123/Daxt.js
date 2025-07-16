@@ -1,7 +1,8 @@
 import axios from "axios";
+import { REMOTE_URL } from "../constants/proxyConfig";
 
 const instance = axios.create({
-  baseURL: "http://127.0.0.1:80", // 服务端请求baseURL设置为远程服务器即可
+  baseURL: REMOTE_URL, // 服务端请求baseURL设置为远程服务器即可
 });
 
 export default instance;

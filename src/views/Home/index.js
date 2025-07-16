@@ -43,7 +43,7 @@ const Home = (props) => {
         <div>基于redux的状态管理支持</div>
         <div>对cssModule的样式服务端渲染支持</div>
         <div>基于react-helmet进行更细节的seo优化</div>
-        {props.data}
+        <div>{props.data.title}</div>
       </div>
     </Fragment>
   );

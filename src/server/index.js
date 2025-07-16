@@ -6,6 +6,8 @@ import { matchRoutes } from "react-router-dom";
 import proxy from "express-http-proxy";
 import CircuitBreaker from "./circuitBreaker";
 import { renderDegraded } from "./degradation";
+import { REMOTE_URL } from "../constants/proxyConfig";
+import { SERVER_PORT } from "../constants/serverConfig";
 
 const app = express();
 app.use(express.static("public"));
@@ -13,9 +15,29 @@ app.use(express.static("public"));
 // 创建熔断器实例
 const ssrBreaker = new CircuitBreaker();
 
+
+// 添加本地API接口
+app.get("/home", (req, res) => {
+  // 模拟从数据库或其他数据源获取数据
+  const homeData = {
+    title: "欢迎来到首页",
+    description: "这是一个本地服务提供的首页数据",
+    features: [
+      "服务端渲染 (SSR)",
+      "熔断器机制",
+      "代理转发",
+      "动态路由"
+    ],
+    timestamp: new Date().toISOString(),
+    server: "本地服务"
+  };
+  
+  res.json(homeData);
+});
+
 app.use(
   "/api",
-  proxy("http://127.0.0.1", {
+  proxy(REMOTE_URL, {
     proxyReqPathResolver: function (req) {
       return req.url;
     },
@@ -67,6 +89,6 @@ app.get("*", (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+app.listen(SERVER_PORT, () => {
   console.log("server run successfully");
 });
