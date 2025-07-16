@@ -1,10 +1,5 @@
 {
   "version": 2,
-  "functions": {
-    "build/bundle.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "builds": [
     {
       "src": "build/bundle.js",
