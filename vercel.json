@@ -2,8 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "build/bundle.js",
+      "src": "serverOutput/bundle.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "clientOutput/**",
+      "use": "@vercel/static"
     },
     {
       "src": "public/**",
@@ -13,7 +17,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/build/bundle.js"
+      "dest": "/serverOutput/bundle.js"
     },
     {
       "src": "/favicon.ico",
@@ -21,11 +25,11 @@
     },
     {
       "src": "/index.js",
-      "dest": "/public/index.js"
+      "dest": "/clientOutput/index.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/build/bundle.js"
+      "dest": "/serverOutput/bundle.js"
     }
   ],
   "env": {

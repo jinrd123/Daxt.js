@@ -10,6 +10,7 @@ import { REMOTE_URL } from "../constants/proxyConfig";
 import { SERVER_PORT } from "../constants/serverConfig";
 
 const app = express();
+app.use(express.static("clientOutput"));
 app.use(express.static("public"));
 
 // 创建熔断器实例
