@@ -32,17 +32,7 @@ const isDegradedMode = () => {
     return true;
   }
   
-  const rootElement = document.getElementById("root");
-  // 检查是否有服务端渲染的React内容
-  const hasServerContent = rootElement.children.length > 0;
-  const hasComplexContent = rootElement.innerHTML.includes('class=') || 
-                           rootElement.innerHTML.includes('data-react');
-  
-  // 检查是否有服务端状态
-  const hasServerState = window.context && window.context.state;
-  
-  // 如果只有简单的loading内容且没有服务端状态，则为降级模式
-  return hasServerContent && !hasComplexContent && !hasServerState;
+  return false;
 };
 
 const rootElement = document.getElementById("root");
