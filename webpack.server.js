@@ -13,27 +13,6 @@ const serverConfig = {
     path: path.resolve(__dirname, "build"),
   },
   externals: [nodeExternals()], // 以忽略节点\模块文件夹中的所有模块
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: [
-          "isomorphic-style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1,
-              modules: {
-                localIdentName: "[name]_[local]_[hash:base64:5]",
-              },
-              esModule: false,
-              // localIdentName: "[name]_[local]_[hash:base64:5]",
-            },
-          },
-        ],
-      },
-    ],
-  },
 };
 
 module.exports = merge(config, serverConfig);

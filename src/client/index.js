@@ -5,12 +5,18 @@ import { routesConfig, getRoutes } from "../Routes";
 import { Provider } from "react-redux";
 import { getClientStore } from "../store";
 import StyleContext from "isomorphic-style-loader/StyleContext";
+import { AntdConfigProvider } from "../utils/antdConfig";
+import { StyleProvider } from '@ant-design/cssinjs';
 
 const App = () => {
   return (
-    <Provider store={getClientStore()}>
-      <BrowserRouter>{getRoutes(routesConfig)}</BrowserRouter>
-    </Provider>
+    <StyleProvider hashPriority="high">
+      <Provider store={getClientStore()}>
+        <AntdConfigProvider>
+          <BrowserRouter>{getRoutes(routesConfig)}</BrowserRouter>
+        </AntdConfigProvider>
+      </Provider>
+    </StyleProvider>
   );
 };
 

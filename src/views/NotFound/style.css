@@ -1,4 +1,4 @@
-.not-found {
+.notFound {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,7 @@
   background-color: #f5f5f5;
 }
 
-.not-found-content {
+.notFoundContent {
   text-align: center;
   padding: 2rem;
   background: white;
@@ -14,25 +14,25 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.not-found h1 {
+.notFound h1 {
   font-size: 6rem;
   color: #e74c3c;
   margin: 0;
   font-weight: bold;
 }
 
-.not-found h2 {
+.notFound h2 {
   font-size: 2rem;
   color: #333;
   margin: 1rem 0;
 }
 
-.not-found p {
+.notFound p {
   color: #666;
   margin-bottom: 2rem;
 }
 
-.back-home {
+.backHome {
   display: inline-block;
   padding: 12px 24px;
   background-color: #3498db;
@@ -42,6 +42,6 @@
   transition: background-color 0.3s;
 }
 
-.back-home:hover {
+.backHome:hover {
   background-color: #2980b9;
 } 

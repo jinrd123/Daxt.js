@@ -1,14 +1,16 @@
 import React from 'react';
-import './style.css';
+import styles from './style.css';
+import useStyles from 'isomorphic-style-loader/useStyles';
 
 const NotFound = () => {
+  useStyles(styles);
   return (
-    <div className="not-found">
-      <div className="not-found-content">
+    <div className={styles.notFound}>
+      <div className={styles.notFoundContent}>
         <h1>404</h1>
         <h2>页面未找到</h2>
         <p>抱歉，您访问的页面不存在。</p>
-        <a href="/" className="back-home">返回首页</a>
+        <a href="/" className={styles.backHome}>返回首页</a>
       </div>
     </div>
   );
